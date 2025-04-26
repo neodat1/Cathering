@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catering de Eventos en Quito</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: #f8f8f8;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-weight: bold;
+            font-size: 24px;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+        }
+        .hero {
+            background: #444 url('banner.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .cta-button {
+            background: #ff6600;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: inline-block;
+        }
+        .benefits, .testimonials, .contact {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+        input, textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            background: #007BFF;
+            color: white;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        @media (max-width: 768px) {
+            .hero {
+                padding: 60px 20px;
+            }
+            header {
+                flex-direction: column;
+            }
+            nav a {
+                display: block;
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">CateringEventosEC</div>
+        <nav>
+            <a href="#beneficios">Beneficios</a>
+            <a href="#testimonios">Testimonios</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>¡Haz de tu evento un recuerdo inolvidable!</h1>
+        <p>Menús personalizados, ingredientes frescos y atención de primer nivel para tu ocasión especial en Quito.</p>
+        <a href="#contacto" class="cta-button">Solicitar Cotización</a>
+    </section>
+
+    <section id="beneficios" class="benefits">
+        <h2>¿Por qué elegirnos?</h2>
+        <ul>
+            <li>Menús gourmet y tradicionales ecuatorianos.</li>
+            <li>Opciones veganas, vegetarianas y sin gluten.</li>
+            <li>Servicio completo: alimentación, montaje y personal de atención.</li>
+            <li>Proveedores locales y sostenibles.</li>
+            <li>Más de 200 eventos exitosos.</li>
+        </ul>
+    </section>
+
+    <section id="testimonios" class="testimonials">
+        <h2>Testimonios</h2>
+        <blockquote>
+            "La comida fue espectacular y el servicio aún mejor. ¡Mi boda fue perfecta!" — Andrea Paredes
+        </blockquote>
+        <blockquote>
+            "Superaron todas mis expectativas. ¡Recomiendo este catering al 100%!" — Luis Cevallos
+        </blockquote>
+    </section>
+
+    <section id="contacto" class="contact">
+        <h2>Agenda tu degustación gratuita</h2>
+        <form action="https://formspree.io/f/{YOUR_FORM_ID}" method="POST">
+            <input type="text" name="nombre" placeholder="Nombre completo" required>
+            <input type="tel" name="telefono" placeholder="Teléfono" required>
+            <input type="email" name="email" placeholder="Correo electrónico" required>
+            <input type="text" name="evento" placeholder="Tipo de evento" required>
+            <input type="number" name="invitados" placeholder="Número de invitados" required>
+            <input type="date" name="fecha" required>
+            <textarea name="mensaje" placeholder="Mensaje adicional" rows="4"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 CateringEventosEC - Quito, Ecuador.</p>
+    </footer>
+
+</body>
+</html>
