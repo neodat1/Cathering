@@ -1,153 +1,489 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catering de Eventos en Quito</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        header {
-            background: #f8f8f8;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            font-weight: bold;
-            font-size: 24px;
-        }
-        nav a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: #333;
-        }
-        .hero {
-            background: #444 url('banner.jpg') no-repeat center center/cover;
-            color: white;
-            text-align: center;
-            padding: 100px 20px;
-        }
-        .cta-button {
-            background: #ff6600;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            margin-top: 20px;
-            display: inline-block;
-        }
-        .benefits, .testimonials, .contact {
-            padding: 40px 20px;
-            text-align: center;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        ul li {
-            margin-bottom: 10px;
-        }
-        form {
-            max-width: 500px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-        }
-        input, textarea {
-            margin-bottom: 15px;
-            padding: 10px;
-            font-size: 16px;
-        }
-        button {
-            background: #007BFF;
-            color: white;
-            border: none;
-            padding: 15px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        footer {
-            background: #222;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-        @media (max-width: 768px) {
-            .hero {
-                padding: 60px 20px;
-            }
-            header {
-                flex-direction: column;
-            }
-            nav a {
-                display: block;
-                margin: 5px 0;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Catering para Eventos – Valle de Los Chillos</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fffaf7;
+      color: #333;
+    }
+
+    header {
+      background-color: #f7c5c0;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #b04538;
+      font-size: 1.8em;
+      margin-bottom: 20px;
+    }
+
+    .features, .testimonials, .packages, .gallery, .form {
+      margin-top: 40px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li::before {
+      content: "✔️ ";
+      color: #b04538;
+    }
+
+    blockquote {
+      background-color: #ffeceb;
+      padding: 15px;
+      margin: 20px 0;
+      border-left: 4px solid #b04538;
+    }
+
+    .form label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+
+    .form input, .form textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-bottom: 15px;
+    }
+
+    .form button {
+      background-color: #b04538;
+      color: white;
+      border: none;
+      padding: 15px;
+      width: 100%;
+      font-size: 1em;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .form button:hover {
+      background-color: #902e24;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: #f7c5c0;
+      color: #333;
+      font-size: 0.9em;
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo">CateringEventosEC</div>
-        <nav>
-            <a href="#beneficios">Beneficios</a>
-            <a href="#testimonios">Testimonios</a>
-            <a href="#contacto">Contacto</a>
-        </nav>
-    </header>
+<header>
+  <h1>Catering para tus Momentos Más Especiales</h1>
+  <p>Eventos sociales en el Valle de Los Chillos sin estrés, con sabor y estilo</p>
+</header>
 
-    <section class="hero">
-        <h1>¡Haz de tu evento un recuerdo inolvidable!</h1>
-        <p>Menús personalizados, ingredientes frescos y atención de primer nivel para tu ocasión especial en Quito.</p>
-        <a href="#contacto" class="cta-button">Solicitar Cotización</a>
-    </section>
+<section class="features">
+  <h2>¿Qué ofrecemos?</h2>
+  <ul>
+    <li>Catering completo con menús variados</li>
+    <li>Decoración temática y elegante</li>
+    <li>Mobiliario y servicio de meseros</li>
+    <li>Opciones para dietas especiales</li>
+    <li>Asesoría personalizada y puntualidad</li>
+  </ul>
+</section>
 
-    <section id="beneficios" class="benefits">
-        <h2>¿Por qué elegirnos?</h2>
-        <ul>
-            <li>Menús gourmet y tradicionales ecuatorianos.</li>
-            <li>Opciones veganas, vegetarianas y sin gluten.</li>
-            <li>Servicio completo: alimentación, montaje y personal de atención.</li>
-            <li>Proveedores locales y sostenibles.</li>
-            <li>Más de 200 eventos exitosos.</li>
-        </ul>
-    </section>
+<section class="testimonials">
+  <h2>Lo que dicen nuestras clientas</h2>
+  <blockquote>
+    “Contratar este servicio fue lo mejor que hice. El bautizo de mi bebé fue hermoso, todo salió perfecto y no tuve que preocuparme de nada. Súper recomendados.”  
+    <br><strong>– Carla A., Conocoto</strong>
+  </blockquote>
+  <blockquote>
+    “Nos ayudaron con todo para el grado de mi hija. La comida fue deliciosa y la atención espectacular. ¡Gracias por tanto profesionalismo!”  
+    <br><strong>– Verónica G., La Armenia</strong>
+  </blockquote>
+</section>
 
-    <section id="testimonios" class="testimonials">
-        <h2>Testimonios</h2>
-        <blockquote>
-            "La comida fue espectacular y el servicio aún mejor. ¡Mi boda fue perfecta!" — Andrea Paredes
-        </blockquote>
-        <blockquote>
-            "Superaron todas mis expectativas. ¡Recomiendo este catering al 100%!" — Luis Cevallos
-        </blockquote>
-    </section>
+<section class="packages">
+  <h2>Paquetes para cada ocasión</h2>
+  <ul>
+    <li><strong>Paquete Bautizo:</strong> Decoración celestial, menú suave, estación de dulces</li>
+    <li><strong>Paquete Matrimonio Íntimo:</strong> Cena elegante, mesa de postres, copas y vajilla</li>
+    <li><strong>Paquete Graduación Familiar:</strong> Buffet variado, bebidas incluidas, mesas temáticas</li>
+  </ul>
+  <p>*¿Quieres algo diferente? ¡Creamos paquetes a medida para ti!*</p>
+</section>
 
-    <section id="contacto" class="contact">
-        <h2>Agenda tu degustación gratuita</h2>
-        <form action="https://formspree.io/f/{YOUR_FORM_ID}" method="POST">
-            <input type="text" name="nombre" placeholder="Nombre completo" required>
-            <input type="tel" name="telefono" placeholder="Teléfono" required>
-            <input type="email" name="email" placeholder="Correo electrónico" required>
-            <input type="text" name="evento" placeholder="Tipo de evento" required>
-            <input type="number" name="invitados" placeholder="Número de invitados" required>
-            <input type="date" name="fecha" required>
-            <textarea name="mensaje" placeholder="Mensaje adicional" rows="4"></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
+<section class="gallery">
+  <h2>Mira nuestro trabajo</h2>
+  <p>Galería de fotos próximamente disponible. Síguenos en Instagram: <strong>@tueventovalle</strong></p>
+</section>
 
-    <footer>
-        <p>© 2025 CateringEventosEC - Quito, Ecuador.</p>
-    </footer>
+<section class="form">
+  <h2>Solicita tu cotización sin compromiso</h2>
+  <form action="https://formsubmit.co/tu-correo@ejemplo.com" method="POST">
+    <label for="nombre">Nombre completo:</label>
+    <input type="text" id="nombre" name="nombre" required>
 
+    <label for="evento">Tipo de evento:</label>
+    <input type="text" id="evento" name="evento" required>
+
+    <label for="fecha">Fecha tentativa:</label>
+    <input type="date" id="fecha" name="fecha">
+
+    <label for="invitados">Número de invitados:</label>
+    <input type="number" id="invitados" name="invitados" required>
+
+    <label for="telefono">Número de WhatsApp:</label>
+    <input type="tel" id="telefono" name="telefono" required>
+
+    <label for="comentarios">Comentarios adicionales:</label>
+    <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+
+    <button type="submit">QUIERO UNA COTIZACIÓN</button>
+  </form>
+</section>
+
+<footer>
+  <p>📍 Servimos en todo el Valle de Los Chillos: Conocoto, La Armenia, San Rafael, El Tingo y más</p>
+  <p>📞 09xx xxx xxx | 📧 contacto@tueventovalle.com</p>
+</footer>
+
+</body>
+</html>
+
+Edad: 33 años
+Estado civil: Casada
+Profesión: Administradora de empresas
+Ubicación: Valle de Los Chillos, vive en Conocoto
+Nivel socioeconómico: Medio – medio alto
+Ingresos mensuales familiares: $1.800 – $2.500
+Educación: Universitaria
+Redes sociales que usa: Instagram, Facebook y WhatsApp
+Valores importantes: Familia, calidad, confianza, eficiencia y presentación estética
+Personalidad: Organizada, práctica, emocionalmente comprometida con los eventos familiares, le gusta delegar pero estar al tanto de los detalles
+Estilo de vida: Suele participar en reuniones familiares, organiza celebraciones para su familia y amigos. Compra productos y servicios por recomendaciones o valoraciones en redes sociales.
+
+🎯 Necesidades y objetivos:
+Quiere celebrar eventos significativos como bautizos, primeras comuniones, cumpleaños importantes y grados de sus hijos o familiares.
+Busca un servicio integral (catering, decoración, mobiliario, personal de servicio) para no tener que preocuparse por detalles logísticos.
+Desea que la comida sea deliciosa, variada y bien presentada, con opciones para personas con dietas especiales (vegetarianos, celíacos, etc.).
+Necesita que los tiempos se cumplan, que la atención al cliente sea cálida y profesional, y que el evento deje un recuerdo inolvidable.
+
+📌 Puntos de dolor:
+Ha tenido malas experiencias con proveedores informales o poco profesionales.
+Le preocupa pagar por un servicio que no cumpla sus expectativas.
+No tiene tiempo para comparar muchos presupuestos ni coordinar múltiples proveedores.
+
+💬 ¿Cómo toma decisiones?
+Investiga en redes sociales (Instagram y Facebook) viendo fotos reales de eventos pasados.
+Lee comentarios y recomendaciones de otras personas del Valle de Los Chillos.
+Pide referencias en grupos de WhatsApp de vecinos, mamás del colegio o familiares.
+Prefiere proveedores que tengan portafolio visual, testimonios y atención rápida por WhatsApp.
+
+💡 ¿Cómo atraerla?
+Publica contenido visual atractivo en Instagram y Facebook (fotos, reels y testimonios de clientes).
+Ofrece combos temáticos (ej. “Paquete Bautizo”, “Paquete Matrimonio Íntimo”) con precios transparentes y detalles incluidos.
+Responde con rapidez, cortesía y claridad en WhatsApp.
+Muestra experiencia en eventos realizados en zonas reconocidas del Valle (Conocoto, San Rafael, La Armenia).
+Ofrece degustaciones o visitas previas para dar confianza.
+ 
+👩 Nombre y datos personales:
+Carla Andrade – 33 años, casada, administradora, vive en Conocoto
+Por qué: Se eligió un perfil de mujer adulta joven, ya que en la práctica, en la mayoría de los eventos sociales (bautizos, grados, bodas pequeñas), quien toma la decisión del catering suele ser una mujer (madre, hermana, novia). En este rango de edad ya suele tener hijos o estar casada, lo que la hace organizar varios tipos de eventos en el entorno familiar.
+Se seleccionó Conocoto por ser una zona residencial activa dentro del Valle de Los Chillos con una gran cantidad de familias jóvenes con ingresos medios.
+
+💰 Nivel socioeconómico e ingresos:
+Medio – medio alto | $1.800 – $2.500 mensuales (familiares)
+Por qué: El catering para eventos requiere una inversión. El segmento de clase media que vive en el Valle busca calidad, pero dentro de un rango razonable de precios. Este perfil representa a alguien que tiene capacidad de pago sin ser un perfil de lujo, y prioriza valor antes que lujo extremo.
+
+🎓 Educación y profesión:
+Universitaria – Administradora de empresas
+Por qué: Una persona con formación profesional es más probable que valore el profesionalismo en el servicio. Además, al ser administradora, valora la organización, puntualidad, cumplimiento y que se le faciliten las decisiones.
+
+📱 Redes sociales que usa:
+Instagram, Facebook y WhatsApp
+Por qué: Son las plataformas más utilizadas por personas de este perfil para buscar proveedores, ver inspiración para eventos y hacer consultas. Además, el boca a boca digital es clave en este tipo de decisiones.
+
+❤️ Valores y personalidad:
+Valora la confianza, presentación, eficiencia, y es emocionalmente comprometida con los eventos
+Por qué: En los eventos familiares, las emociones son clave. No solo busca "alimentar a los invitados", sino crear una experiencia memorable y emotiva, con buen gusto y cero estrés.
+
+🧠 Necesidades y objetivos:
+Busca soluciones completas, sin estrés, con buen servicio y comida deliciosa
+Por qué: Las personas no quieren coordinar 5 proveedores distintos. Quieren delegar y confiar. También buscan detalles como opciones para dietas especiales, porque cada vez más familias tienen invitados con restricciones alimenticias.
+
+😣 Puntos de dolor:
+Miedo a la informalidad, retrasos, comida de baja calidad, mala atención
+Por qué: Es una queja común de quienes han contratado servicios de catering económicos o poco formales. Este perfil busca profesionales serios, pero con un trato cercano.
+
+🧐 Cómo toma decisiones:
+Confía en fotos reales, comentarios, recomendaciones y rapidez en la atención
+Por qué: El marketing visual es clave en eventos. Si no ve fotos reales, no confía. Además, en zonas como el Valle de Los Chillos, las decisiones se toman muchas veces por recomendación en comunidades y redes locales.
+
+📢 Cómo atraerla:
+Con contenido visual, combos temáticos, comunicación clara y presencia en redes
+Por qué: Este perfil necesita inspiración, claridad y facilidad. Los paquetes cerrados le permiten ver de una, sin andar pidiendo cotizaciones. Quiere que le respondan rápido por WhatsApp y ver testimonios para confiar.
+
+Este buyer persona se construyó con base en las características del público que más frecuentemente organiza eventos sociales familiares en zonas residenciales como el Valle de Los Chillos, buscando un equilibrio entre calidad y costo, con enfoque emocional y práctico.
+¿Quieres que elabore un segundo buyer persona alternativo? Por ejemplo, uno más enfocado en eventos corporativos o celebraciones más lujosas.
+ 
+ 
+¡Perfecto! Aquí tienes una propuesta de landing page para tu negocio de catering en eventos sociales, basada en el buyer persona de Carla Andrade y su perfil de consumo en el Valle de Los Chillos. Está diseñada para ser clara, emocional y convertir visitantes en clientes.
+
+🌸 Landing Page: Catering para tus Momentos Más Especiales en el Valle de Los Chillos
+
+🎉 "Haz que tu evento familiar sea inolvidable sin preocuparte por nada"
+Catering profesional para matrimonios, bautizos, grados y más – con todo incluido y atención personalizada en el Valle de Los Chillos.
+
+✅ ¿Qué ofrecemos?
+🔹 Catering completo: Menús variados con opciones para vegetarianos, niños y dietas especiales
+ 🔹 Decoración y ambientación temática
+ 🔹 Mobiliario elegante y práctico
+ 🔹 Servicio de meseros y logística
+ 🔹 Asesoría personalizada y puntualidad garantizada
+
+👩‍👧‍👦 Pensado para mujeres como tú
+Sabemos lo importante que es celebrar en familia. Ya sea el bautizo de tu hijo, el grado de tu hija o tu aniversario, nos encargamos de que todo luzca hermoso, la comida sea deliciosa y tú solo te dediques a disfrutar.
+
+💬 Lo que dicen nuestras clientas
+⭐️⭐️⭐️⭐️⭐️
+ "Contratar este servicio fue lo mejor que hice. El bautizo de mi bebé fue hermoso, todo salió perfecto y no tuve que preocuparme de nada. Súper recomendados."
+ — Carla A., Conocoto
+⭐️⭐️⭐️⭐️⭐️
+ "Nos ayudaron con todo para el grado de mi hija. La comida fue deliciosa y la atención espectacular. ¡Gracias por tanto profesionalismo!"
+ — Verónica G., La Armenia
+
+📦 Paquetes que se adaptan a ti
+🎀 Paquete Bautizo – Decoración celestial, menú suave, estación de dulces
+ 💍 Paquete Matrimonio Íntimo – Cena elegante, mesa de postres, copas y vajilla
+ 🎓 Paquete Graduación Familiar – Buffet variado, bebidas incluidas, mesas temáticas
+💌 ¿Quieres algo diferente? ¡Creamos paquetes a medida para ti!
+
+📸 Mira nuestro trabajo
+(Galería visual de eventos realizados: fotos de mesas decoradas, platos servidos, detalles personalizados, etc.)
+
+📲 Solicita tu cotización sin compromiso
+Déjanos tus datos y te contactamos por WhatsApp en menos de 1 hora.
+[Formulario de contacto]:
+Nombre completo
+Tipo de evento
+Fecha tentativa
+Número de invitados
+Número de WhatsApp
+Comentarios
+🔘 [QUIERO UNA COTIZACIÓN]
+
+📍 Servimos en todo el Valle de Los Chillos
+Conocoto | La Armenia | San Rafael | El Tingo | Alangasí y más
+
+🤝 Tu evento en buenas manos
+Más de 5 años organizando eventos familiares con cariño, puntualidad y excelencia.
+📞 Llámanos: 09xx xxx xxx
+ 📱 Escríbenos por WhatsApp
+ 📧 contacto@tueventovalle.com
+ 🌐 [Tu sitio web o Instagram]
+ 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Catering para Eventos – Valle de Los Chillos</title>
+  <style>
+body {
+  	font-family: 'Segoe UI', sans-serif;
+  	margin: 0;
+  	padding: 0;
+  	background-color: #fffaf7;
+  	color: #333;
+}
+ 
+header {
+  	background-color: #f7c5c0;
+  	padding: 40px 20px;
+  	text-align: center;
+}
+ 
+header h1 {
+  	font-size: 2.5em;
+  	margin: 0;
+}
+ 
+header p {
+  	font-size: 1.2em;
+  	margin-top: 10px;
+}
+ 
+section {
+  	padding: 40px 20px;
+  	max-width: 1000px;
+  	margin: auto;
+}
+ 
+h2 {
+  	color: #b04538;
+  	font-size: 1.8em;
+  	margin-bottom: 20px;
+}
+ 
+.features, .testimonials, .packages, .gallery, .form {
+  	margin-top: 40px;
+}
+ 
+ul {
+  	list-style: none;
+  	padding-left: 0;
+}
+ 
+li::before {
+  	content: "✔️ ";
+  	color: #b04538;
+}
+ 
+blockquote {
+  	background-color: #ffeceb;
+  	padding: 15px;
+  	margin: 20px 0;
+  	border-left: 4px solid #b04538;
+}
+ 
+.form label {
+  	display: block;
+  	margin: 10px 0 5px;
+}
+ 
+.form input, .form textarea {
+  	width: 100%;
+  	padding: 10px;
+  	border: 1px solid #ccc;
+  	border-radius: 6px;
+  	margin-bottom: 15px;
+}
+ 
+.form button {
+  	background-color: #b04538;
+  	color: white;
+  	border: none;
+  	padding: 15px;
+  	width: 100%;
+  	font-size: 1em;
+  	border-radius: 8px;
+  	cursor: pointer;
+}
+ 
+.form button:hover {
+  	background-color: #902e24;
+}
+ 
+footer {
+  	text-align: center;
+  	padding: 30px;
+  	background-color: #f7c5c0;
+  	color: #333;
+  	font-size: 0.9em;
+}
+  </style>
+</head>
+<body>
+ 
+<header>
+  <h1>Catering para tus Momentos Más Especiales</h1>
+  <p>Eventos sociales en el Valle de Los Chillos sin estrés, con sabor y estilo</p>
+</header>
+ 
+<section class="features">
+  <h2>¿Qué ofrecemos?</h2>
+  <ul>
+    <li>Catering completo con menús variados</li>
+    <li>Decoración temática y elegante</li>
+    <li>Mobiliario y servicio de meseros</li>
+    <li>Opciones para dietas especiales</li>
+    <li>Asesoría personalizada y puntualidad</li>
+  </ul>
+</section>
+ 
+<section class="testimonials">
+  <h2>Lo que dicen nuestras clientas</h2>
+  <blockquote>
+    “Contratar este servicio fue lo mejor que hice. El bautizo de mi bebé fue hermoso, todo salió perfecto y no tuve que preocuparme de nada. Súper recomendados.” 
+<br><strong>– Carla A., Conocoto</strong>
+  </blockquote>
+  <blockquote>
+“Nos ayudaron con todo para el grado de mi hija. La comida fue deliciosa y la atención espectacular. ¡Gracias por tanto profesionalismo!” 
+    <br><strong>– Verónica G., La Armenia</strong>
+  </blockquote>
+</section>
+ 
+<section class="packages">
+  <h2>Paquetes para cada ocasión</h2>
+  <ul>
+    <li><strong>Paquete Bautizo:</strong> Decoración celestial, menú suave, estación de dulces</li>
+    <li><strong>Paquete Matrimonio Íntimo:</strong> Cena elegante, mesa de postres, copas y vajilla</li>
+    <li><strong>Paquete Graduación Familiar:</strong> Buffet variado, bebidas incluidas, mesas temáticas</li>
+  </ul>
+  <p>*¿Quieres algo diferente? ¡Creamos paquetes a medida para ti!*</p>
+</section>
+ 
+<section class="gallery">
+  <h2>Mira nuestro trabajo</h2>
+  <p>Galería de fotos próximamente disponible. Síguenos en Instagram: <strong>@tueventovalle</strong></p>
+</section>
+ 
+<section class="form">
+  <h2>Solicita tu cotización sin compromiso</h2>
+  <form action="https://formsubmit.co/tu-correo@ejemplo.com" method="POST">
+<label for="nombre">Nombre completo:</label>
+<input type="text" id="nombre" name="nombre" required>
+ 
+<label for="evento">Tipo de evento:</label>
+<input type="text" id="evento" name="evento" required>
+ 
+<label for="fecha">Fecha tentativa:</label>
+<input type="date" id="fecha" name="fecha">
+ 
+<label for="invitados">Número de invitados:</label>
+<input type="number" id="invitados" name="invitados" required>
+ 
+<label for="telefono">Número de WhatsApp:</label>
+    <input type="tel" id="telefono" name="telefono" required>
+ 
+    <label for="comentarios">Comentarios adicionales:</label>
+    <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+ 
+    <button type="submit">QUIERO UNA COTIZACIÓN</button>
+  </form>
+</section>
+ 
+<footer>
+  <p>📍 Servimos en todo el Valle de Los Chillos: Conocoto, La Armenia, San Rafael, El Tingo y más</p>
+  <p>📞 09xx xxx xxx | 📧 contacto@tueventovalle.com</p>
+</footer>
+ 
 </body>
 </html>
