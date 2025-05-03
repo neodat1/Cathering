@@ -12,104 +12,133 @@
     }
 
     body {
-      font-family: 'Arial', sans-serif;
-      line-height: 1.6;
-      background-color: #0A0A0A; /* Fondo negro suave */
-      color: #D4AF37; /* Dorado principal */
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0D0D0D;
+      color: #F5F5F5;
     }
 
     header {
-      background-color: #000;
-      padding: 20px 30px;
+      background-color: #0D0D0D;
+      padding: 15px 30px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      border-bottom: 2px solid #D4AF37;
     }
 
     .logo {
-      height: 60px;
+      height: 50px;
     }
 
     nav a {
-      color: #D4AF37;
+      color: #F5F5F5;
       margin-left: 20px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      color: #D4AF37;
     }
 
     .hero {
       text-align: center;
-      padding: 50px 20px;
+      padding: 60px 20px;
+      background: linear-gradient(to bottom, #1A1A1A, #0D0D0D);
     }
 
-    .hero-image {
-      margin-top: 20px;
+    .hero h1 {
+      font-size: 2.5em;
+      color: #D4AF37;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      color: #E0E0E0;
+      margin-bottom: 30px;
+    }
+
+    .hero img {
       width: 100%;
-      max-width: 600px;
-      height: auto;
-      border-radius: 8px;
+      max-width: 500px;
+      border-radius: 10px;
       box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
     }
 
-    .benefits, .testimonials, .special-offer, .contact-form, .contact-data {
-      padding: 40px 20px;
+    section {
+      padding: 50px 20px;
       text-align: center;
+    }
+
+    h2 {
+      color: #D4AF37;
+      margin-bottom: 20px;
+      font-size: 2em;
     }
 
     .benefits ul {
       list-style: none;
-      margin-top: 20px;
+      max-width: 700px;
+      margin: auto;
+      padding: 0;
     }
 
     .benefits li {
-      margin-bottom: 10px;
+      margin-bottom: 12px;
+      font-size: 1.1em;
+      color: #DDDDDD;
     }
 
     .testimonials blockquote {
+      background-color: #1F1F1F;
+      border-left: 5px solid #D4AF37;
+      margin: 20px auto;
+      padding: 20px;
       font-style: italic;
-      margin: 20px 0;
-      color: #FFD700;
+      max-width: 700px;
+      color: #CCCCCC;
     }
 
     .special-offer p {
-      background-color: #3a2e00;
-      padding: 15px;
+      background-color: #262626;
+      color: #FFD700;
+      padding: 20px;
       border-radius: 8px;
       display: inline-block;
+      font-size: 1.2em;
       border: 1px solid #D4AF37;
     }
 
     .contact-form form {
-      max-width: 500px;
-      margin: 0 auto;
+      max-width: 600px;
+      margin: auto;
       display: flex;
       flex-direction: column;
     }
 
     .contact-form input,
     .contact-form select,
-    .contact-form textarea,
-    .contact-form button {
-      margin-bottom: 15px;
-      padding: 12px;
-      font-size: 16px;
-      border-radius: 5px;
-      border: none;
-    }
-
-    .contact-form input,
-    .contact-form select,
     .contact-form textarea {
-      background-color: #1e1e1e;
-      color: #FFD700;
+      padding: 14px;
+      margin-bottom: 15px;
+      background-color: #1E1E1E;
+      color: #F5F5F5;
       border: 1px solid #555;
+      border-radius: 6px;
+      font-size: 16px;
     }
 
     .contact-form button {
+      padding: 14px;
       background-color: #D4AF37;
-      color: #0A0A0A;
-      font-weight: bold;
+      color: #0D0D0D;
+      font-size: 1em;
+      border: none;
+      border-radius: 6px;
       cursor: pointer;
+      font-weight: bold;
     }
 
     .contact-form button:hover {
@@ -117,26 +146,31 @@
     }
 
     .contact-data p {
-      margin: 10px 0;
+      color: #CCCCCC;
+      margin: 8px 0;
     }
 
     footer {
-      background: #000;
-      color: #D4AF37;
+      background-color: #000;
+      color: #888;
+      padding: 30px 20px;
       text-align: center;
-      padding: 20px;
-      font-size: 14px;
+      font-size: 0.9em;
     }
 
     footer a {
       color: #D4AF37;
+      text-decoration: none;
+    }
+
+    footer a:hover {
       text-decoration: underline;
     }
   </style>
 </head>
 <body>
 
-  <!-- Encabezado -->
+  <!-- Header -->
   <header>
     <img src="Catee.jpg" alt="ADC Eventos Logo" class="logo">
     <nav>
@@ -145,22 +179,22 @@
     </nav>
   </header>
 
-  <!-- Sección principal -->
+  <!-- Hero -->
   <section class="hero">
     <h1>¡Haz de tu evento un recuerdo inolvidable!</h1>
-    <p>Menús personalizados, atención profesional y decoración con estilo para cada ocasión especial.</p>
-    <img src="Catee.jpg" alt="Evento exitoso" class="hero-image">
+    <p>Experiencia, elegancia y sabor en cada celebración. Catering completo para quienes valoran lo mejor.</p>
+    <img src="Catee.jpg" alt="Imagen de evento ADC">
   </section>
 
   <!-- Beneficios -->
   <section id="servicios" class="benefits">
-    <h2>¿Qué te ofrecemos?</h2>
+    <h2>¿Qué ofrecemos?</h2>
     <ul>
-      <li>Menús gourmet y tradicionales ecuatorianos.</li>
-      <li>Opciones dietéticas especiales (vegano, sin gluten).</li>
-      <li>Servicio completo: alimentación, montaje y personal de atención.</li>
-      <li>Ingredientes frescos de proveedores locales.</li>
-      <li>Experiencia certificada en bodas y eventos privados.</li>
+      <li>✅ Menús gourmet y tradicionales ecuatorianos.</li>
+      <li>✅ Opciones para invitados con dietas especiales.</li>
+      <li>✅ Servicio integral: decoración, montaje y personal.</li>
+      <li>✅ Ingredientes frescos, presentación impecable.</li>
+      <li>✅ Eventos familiares, sociales y empresariales.</li>
     </ul>
   </section>
 
@@ -168,56 +202,80 @@
   <section class="testimonials">
     <h2>Clientes felices</h2>
     <blockquote>
-      "La mejor decisión que tomamos para nuestra boda. El servicio y la comida fueron excepcionales."
-      <cite>– Andrea Paredes, Quito</cite>
+      “La mejor decisión para nuestra boda. Todo fue perfecto: comida, atención y ambientación.”
+      <br><strong>– Andrea Paredes, Quito</strong>
     </blockquote>
     <blockquote>
-      "Cumplieron con todo lo prometido y más. Invitados felices, evento exitoso."
-      <cite>– Luis Cevallos, Quito</cite>
+      “Súper puntuales y organizados. Mi familia quedó encantada con el servicio de ADC.”
+      <br><strong>– Luis Cevallos, San Rafael</strong>
     </blockquote>
   </section>
 
-  <!-- Oferta especial -->
+  <!-- Oferta -->
   <section class="special-offer">
-    <h2>Oferta Especial</h2>
-    <p>Solicita tu cotización y recibe una <strong>degustación gratuita</strong>.</p>
+    <h2>Oferta exclusiva</h2>
+    <p>Solicita tu cotización hoy y recibe una <strong>degustación gratuita</strong>.</p>
   </section>
 
-  <!-- Formulario de contacto -->
+  <!-- Formulario -->
   <section id="contacto" class="contact-form">
-    <h2>Agendar Degustación o Cotización</h2>
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <input type="text" name="nombre" placeholder="Nombre completo" required>
-      <input type="tel" name="telefono" placeholder="Número de teléfono" required>
-      <input type="email" name="correo" placeholder="Correo electrónico" required>
-      <select name="tipo_evento" required>
+    <h2>Solicita Cotización por WhatsApp</h2>
+    <form onsubmit="enviarPorWhatsapp(); return false;">
+      <input type="text" id="nombre" placeholder="Nombre completo" required>
+      <input type="tel" id="telefono" placeholder="Número de teléfono" required>
+      <input type="email" id="correo" placeholder="Correo electrónico" required>
+      <select id="tipo_evento" required>
         <option value="">Tipo de evento</option>
-        <option value="boda">Boda</option>
-        <option value="cumpleaños">Cumpleaños</option>
-        <option value="empresarial">Empresarial</option>
-        <option value="otro">Otro</option>
+        <option value="Boda">Boda</option>
+        <option value="Cumpleaños">Cumpleaños</option>
+        <option value="Empresarial">Empresarial</option>
+        <option value="Otro">Otro</option>
       </select>
-      <input type="number" name="invitados" placeholder="Número de invitados" required>
-      <input type="date" name="fecha_evento" placeholder="Fecha estimada" required>
-      <textarea name="mensaje" placeholder="Mensaje adicional"></textarea>
-      <button type="submit">Solicitar Cotización</button>
+      <input type="number" id="invitados" placeholder="Número de invitados" required>
+      <input type="date" id="fecha_evento" required>
+      <textarea id="mensaje" placeholder="Mensaje adicional (opcional)"></textarea>
+      <button type="submit">Enviar por WhatsApp</button>
     </form>
   </section>
 
   <!-- Datos de contacto -->
   <section class="contact-data">
-    <p>¿Tienes preguntas? Contáctanos directamente:</p>
     <p><strong>WhatsApp:</strong> +593 99 123 4567</p>
     <p><strong>Teléfono:</strong> (02) 234-5678</p>
     <p><strong>Instagram:</strong> @adc_eventos</p>
   </section>
 
-  <!-- Pie de página -->
+  <!-- Footer -->
   <footer>
     <p>© 2025 ADC Eventos. Todos los derechos reservados.</p>
     <p><a href="#">Política de privacidad</a> | <a href="#">Términos y condiciones</a></p>
     <p>Quito, Ecuador</p>
   </footer>
+
+  <!-- Script WhatsApp -->
+  <script>
+    function enviarPorWhatsapp() {
+      const nombre = document.getElementById("nombre").value;
+      const telefono = document.getElementById("telefono").value;
+      const correo = document.getElementById("correo").value;
+      const tipo = document.getElementById("tipo_evento").value;
+      const invitados = document.getElementById("invitados").value;
+      const fecha = document.getElementById("fecha_evento").value;
+      const mensaje = document.getElementById("mensaje").value;
+
+      const texto = `Hola, soy ${nombre}%0A` +
+                    `Quisiera una cotización para un evento tipo: *${tipo}*%0A` +
+                    `Fecha: ${fecha}%0A` +
+                    `Invitados: ${invitados}%0A` +
+                    `Teléfono: ${telefono}%0A` +
+                    `Correo: ${correo}%0A` +
+                    `Mensaje: ${mensaje}`;
+
+      const numero = "593991234567"; // <-- Reemplace con su número real en formato internacional
+      const url = `https://wa.me/${numero}?text=${texto}`;
+      window.open(url, "_blank");
+    }
+  </script>
 
 </body>
 </html>
