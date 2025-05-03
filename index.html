@@ -4,9 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ADC Eventos | Catering y Organización de Eventos</title>
-
   <style>
-    /* Reset básico */
     * {
       margin: 0;
       padding: 0;
@@ -16,25 +14,24 @@
     body {
       font-family: 'Arial', sans-serif;
       line-height: 1.6;
-      background-color: #FFF8F2; /*Para el fondo de pantalla de la landing*/
-      color: #333;
+      background-color: #0A0A0A; /* Fondo negro suave */
+      color: #D4AF37; /* Dorado principal */
     }
 
     header {
-      background: #004d40;
-      color: #B04538; /*encabezado*/
-      padding: 15px 30px;
+      background-color: #000;
+      padding: 20px 30px;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
 
     .logo {
-      height: 50px;
+      height: 60px;
     }
 
     nav a {
-      color: #fff;
+      color: #D4AF37;
       margin-left: 20px;
       text-decoration: none;
       font-weight: bold;
@@ -43,7 +40,6 @@
     .hero {
       text-align: center;
       padding: 50px 20px;
-      background-color: #e0f2f1;
     }
 
     .hero-image {
@@ -52,6 +48,7 @@
       max-width: 600px;
       height: auto;
       border-radius: 8px;
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
     }
 
     .benefits, .testimonials, .special-offer, .contact-form, .contact-data {
@@ -71,13 +68,15 @@
     .testimonials blockquote {
       font-style: italic;
       margin: 20px 0;
+      color: #FFD700;
     }
 
     .special-offer p {
-      background-color: #ffcc80;
+      background-color: #3a2e00;
       padding: 15px;
       border-radius: 8px;
       display: inline-block;
+      border: 1px solid #D4AF37;
     }
 
     .contact-form form {
@@ -87,22 +86,34 @@
       flex-direction: column;
     }
 
-    .contact-form input, .contact-form select, .contact-form textarea, .contact-form button {
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea,
+    .contact-form button {
       margin-bottom: 15px;
       padding: 12px;
       font-size: 16px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+      background-color: #1e1e1e;
+      color: #FFD700;
+      border: 1px solid #555;
     }
 
     .contact-form button {
-      background-color: #004d40;
-      color: white;
-      border: none;
+      background-color: #D4AF37;
+      color: #0A0A0A;
+      font-weight: bold;
       cursor: pointer;
-      border-radius: 5px;
     }
 
     .contact-form button:hover {
-      background-color: #00796b;
+      background-color: #bfa133;
     }
 
     .contact-data p {
@@ -110,25 +121,24 @@
     }
 
     footer {
-      background: #004d40;
-      color: white;
+      background: #000;
+      color: #D4AF37;
       text-align: center;
       padding: 20px;
       font-size: 14px;
     }
 
     footer a {
-      color: #80cbc4;
-      text-decoration: none;
+      color: #D4AF37;
+      text-decoration: underline;
     }
   </style>
-
 </head>
 <body>
 
   <!-- Encabezado -->
   <header>
-    <img src="https://via.placeholder.com/150x50?text=LOGO" alt="ADC Eventos Logo" class="logo">
+    <img src="Catee.jpg" alt="ADC Eventos Logo" class="logo">
     <nav>
       <a href="#servicios">Servicios</a>
       <a href="#contacto">Contacto</a>
@@ -138,8 +148,8 @@
   <!-- Sección principal -->
   <section class="hero">
     <h1>¡Haz de tu evento un recuerdo inolvidable!</h1>
-    <p>Menús personalizados, ingredientes frescos y atención de primer nivel para tu ocasión especial.</p>
-    <img src="https://via.placeholder.com/600x400?text=Foto+Evento" alt="Evento exitoso" class="hero-image">
+    <p>Menús personalizados, atención profesional y decoración con estilo para cada ocasión especial.</p>
+    <img src="Catee.jpg" alt="Evento exitoso" class="hero-image">
   </section>
 
   <!-- Beneficios -->
@@ -158,12 +168,12 @@
   <section class="testimonials">
     <h2>Clientes felices</h2>
     <blockquote>
-      "La mejor decisión que tomamos para nuestra boda. El servicio y la comida fueron excepcionales." 
-      <cite>- Andrea Paredes, Quito</cite>
+      "La mejor decisión que tomamos para nuestra boda. El servicio y la comida fueron excepcionales."
+      <cite>– Andrea Paredes, Quito</cite>
     </blockquote>
     <blockquote>
       "Cumplieron con todo lo prometido y más. Invitados felices, evento exitoso."
-      <cite>- Luis Cevallos, Quito</cite>
+      <cite>– Luis Cevallos, Quito</cite>
     </blockquote>
   </section>
 
