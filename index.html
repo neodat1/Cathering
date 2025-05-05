@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ADC Eventos | Catering y Organización de Eventos</title>
   <style>
     * {
       margin: 0;
@@ -13,17 +7,17 @@
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #0D0D0D;
-      color: #F5F5F5;
+      background-color: #FDF6EC; /* Marfil */
+      color: #2C2C2C; /* Gris carbón */
     }
 
     header {
-      background-color: #0D0D0D;
+      background-color: #7B2D26; /* Vino */
       padding: 15px 30px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-bottom: 2px solid #D4AF37;
+      border-bottom: 2px solid #E1B530; /* Mostaza */
     }
 
     .logo {
@@ -31,7 +25,7 @@
     }
 
     nav a {
-      color: #F5F5F5;
+      color: #FDF6EC;
       margin-left: 20px;
       text-decoration: none;
       font-weight: 500;
@@ -39,24 +33,24 @@
     }
 
     nav a:hover {
-      color: #D4AF37;
+      color: #E1B530;
     }
 
     .hero {
       text-align: center;
       padding: 60px 20px;
-      background: linear-gradient(to bottom, #1A1A1A, #0D0D0D);
+      background: linear-gradient(to bottom, #A6B49A, #FDF6EC); /* Verde salvia a marfil */
     }
 
     .hero h1 {
       font-size: 2.5em;
-      color: #D4AF37;
+      color: #7B2D26;
       margin-bottom: 15px;
     }
 
     .hero p {
       font-size: 1.2em;
-      color: #E0E0E0;
+      color: #2C2C2C;
       margin-bottom: 30px;
     }
 
@@ -64,7 +58,7 @@
       width: 100%;
       max-width: 500px;
       border-radius: 10px;
-      box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+      box-shadow: 0 0 20px rgba(123, 45, 38, 0.5); /* Vino */
     }
 
     section {
@@ -73,7 +67,7 @@
     }
 
     h2 {
-      color: #D4AF37;
+      color: #7B2D26;
       margin-bottom: 20px;
       font-size: 2em;
     }
@@ -88,27 +82,27 @@
     .benefits li {
       margin-bottom: 12px;
       font-size: 1.1em;
-      color: #DDDDDD;
+      color: #2C2C2C;
     }
 
     .testimonials blockquote {
-      background-color: #1F1F1F;
-      border-left: 5px solid #D4AF37;
+      background-color: #A6B49A; /* Verde salvia */
+      border-left: 5px solid #E1B530;
       margin: 20px auto;
       padding: 20px;
       font-style: italic;
       max-width: 700px;
-      color: #CCCCCC;
+      color: #2C2C2C;
     }
 
     .special-offer p {
-      background-color: #262626;
-      color: #FFD700;
+      background-color: #7B2D26;
+      color: #FDF6EC;
       padding: 20px;
       border-radius: 8px;
       display: inline-block;
       font-size: 1.2em;
-      border: 1px solid #D4AF37;
+      border: 1px solid #E1B530;
     }
 
     .contact-form form {
@@ -123,17 +117,17 @@
     .contact-form textarea {
       padding: 14px;
       margin-bottom: 15px;
-      background-color: #1E1E1E;
-      color: #F5F5F5;
-      border: 1px solid #555;
+      background-color: #FDF6EC;
+      color: #2C2C2C;
+      border: 1px solid #A6B49A;
       border-radius: 6px;
       font-size: 16px;
     }
 
     .contact-form button {
       padding: 14px;
-      background-color: #D4AF37;
-      color: #0D0D0D;
+      background-color: #E1B530;
+      color: #2C2C2C;
       font-size: 1em;
       border: none;
       border-radius: 6px;
@@ -142,24 +136,24 @@
     }
 
     .contact-form button:hover {
-      background-color: #bfa133;
+      background-color: #cba629;
     }
 
     .contact-data p {
-      color: #CCCCCC;
+      color: #2C2C2C;
       margin: 8px 0;
     }
 
     footer {
-      background-color: #000;
-      color: #888;
+      background-color: #7B2D26;
+      color: #FDF6EC;
       padding: 30px 20px;
       text-align: center;
       font-size: 0.9em;
     }
 
     footer a {
-      color: #D4AF37;
+      color: #E1B530;
       text-decoration: none;
     }
 
@@ -167,115 +161,3 @@
       text-decoration: underline;
     }
   </style>
-</head>
-<body>
-
-  <!-- Header -->
-  <header>
-    <img src="Catee.jpg" alt="ADC Eventos Logo" class="logo">
-    <nav>
-      <a href="#servicios">Servicios</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </header>
-
-  <!-- Hero -->
-  <section class="hero">
-    <h1>¡Haz de tu evento un recuerdo inolvidable!</h1>
-    <p>Experiencia, elegancia y sabor en cada celebración. Catering completo para quienes valoran lo mejor.</p>
-    <img src="Catee.jpg" alt="Imagen de evento ADC">
-  </section>
-
-  <!-- Beneficios -->
-  <section id="servicios" class="benefits">
-    <h2>¿Qué ofrecemos?</h2>
-    <ul>
-      <li>✅ Menús gourmet y tradicionales ecuatorianos.</li>
-      <li>✅ Opciones para invitados con dietas especiales.</li>
-      <li>✅ Servicio integral: decoración, montaje y personal.</li>
-      <li>✅ Ingredientes frescos, presentación impecable.</li>
-      <li>✅ Eventos familiares, sociales y empresariales.</li>
-    </ul>
-  </section>
-
-  <!-- Testimonios -->
-  <section class="testimonials">
-    <h2>Clientes felices</h2>
-    <blockquote>
-      “La mejor decisión para nuestra boda. Todo fue perfecto: comida, atención y ambientación.”
-      <br><strong>– Andrea Paredes, Quito</strong>
-    </blockquote>
-    <blockquote>
-      “Súper puntuales y organizados. Mi familia quedó encantada con el servicio de ADC.”
-      <br><strong>– Luis Cevallos, San Rafael</strong>
-    </blockquote>
-  </section>
-
-  <!-- Oferta -->
-  <section class="special-offer">
-    <h2>Oferta exclusiva</h2>
-    <p>Solicita tu cotización hoy y recibe una <strong>degustación gratuita</strong>.</p>
-  </section>
-
-  <!-- Formulario -->
-  <section id="contacto" class="contact-form">
-    <h2>Solicita Cotización por WhatsApp</h2>
-    <form onsubmit="enviarPorWhatsapp(); return false;">
-      <input type="text" id="nombre" placeholder="Nombre completo" required>
-      <input type="tel" id="telefono" placeholder="Número de teléfono" required>
-      <input type="email" id="correo" placeholder="Correo electrónico" required>
-      <select id="tipo_evento" required>
-        <option value="">Tipo de evento</option>
-        <option value="Boda">Boda</option>
-        <option value="Cumpleaños">Cumpleaños</option>
-        <option value="Empresarial">Empresarial</option>
-        <option value="Otro">Otro</option>
-      </select>
-      <input type="number" id="invitados" placeholder="Número de invitados" required>
-      <input type="date" id="fecha_evento" required>
-      <textarea id="mensaje" placeholder="Mensaje adicional (opcional)"></textarea>
-      <button type="submit">Enviar por WhatsApp</button>
-    </form>
-  </section>
-
-  <!-- Datos de contacto -->
-  <section class="contact-data">
-    <p><strong>WhatsApp:</strong> +593 988200116</p>
-    <p><strong>Teléfono:</strong> (02) 234-5678</p>
-    <p><strong>Instagram:</strong> @adc_eventos</p>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 ADC Eventos. Todos los derechos reservados.</p>
-    <p><a href="#">Política de privacidad</a> | <a href="#">Términos y condiciones</a></p>
-    <p>Quito, Ecuador</p>
-  </footer>
-
-  <!-- Script WhatsApp -->
-  <script>
-    function enviarPorWhatsapp() {
-      const nombre = document.getElementById("nombre").value;
-      const telefono = document.getElementById("telefono").value;
-      const correo = document.getElementById("correo").value;
-      const tipo = document.getElementById("tipo_evento").value;
-      const invitados = document.getElementById("invitados").value;
-      const fecha = document.getElementById("fecha_evento").value;
-      const mensaje = document.getElementById("mensaje").value;
-
-      const texto = `Hola, soy ${nombre}%0A` +
-                    `Quisiera una cotización para un evento tipo: *${tipo}*%0A` +
-                    `Fecha: ${fecha}%0A` +
-                    `Invitados: ${invitados}%0A` +
-                    `Teléfono: ${telefono}%0A` +
-                    `Correo: ${correo}%0A` +
-                    `Mensaje: ${mensaje}`;
-
-      const numero = "593988200116"; // <-- Reemplace con su número real en formato internacional
-      const url = `https://wa.me/${numero}?text=${texto}`;
-      window.open(url, "_blank");
-    }
-  </script>
-
-</body>
-</html>
