@@ -2,15 +2,15 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ADC Eventos | Catering Profesional</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ADC Eventos | Catering Premium</title>
   <style>
     :root {
-      --color-principal: #A3C43F;
-      --color-secundario: #FDF6EC;
-      --color-titulos: #2C2C2C;
-      --color-texto: #555;
-      --color-boton: #FFE03B;
+      --primary: #7B2D26;
+      --accent: #E1B530;
+      --bg: #FFFDF7;
+      --text: #2C2C2C;
+      --light: #ffffff;
     }
 
     * {
@@ -21,153 +21,162 @@
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: var(--color-secundario);
-      color: var(--color-texto);
-      line-height: 1.6;
+      background-color: var(--bg);
+      color: var(--text);
     }
 
     header {
-      background-color: white;
-      padding: 20px 60px;
+      background-color: var(--light);
+      padding: 24px 60px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 2px solid var(--color-principal);
+      border-bottom: 2px solid var(--accent);
     }
 
     .logo {
+      font-size: 1.6em;
       font-weight: bold;
-      font-size: 1.5em;
-      color: var(--color-principal);
+      color: var(--primary);
     }
 
     nav a {
-      color: var(--color-titulos);
       margin-left: 30px;
       text-decoration: none;
-      font-weight: 600;
-      font-size: 16px;
+      color: var(--text);
+      font-weight: 500;
     }
 
     nav a:hover {
-      color: var(--color-principal);
+      color: var(--accent);
     }
 
     .hero {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
-      padding: 80px 40px;
-      background: white;
+      text-align: center;
+      padding: 100px 20px 60px;
+      background: linear-gradient(to bottom, #fff, #f8f4eb);
     }
 
-    .hero-text {
-      flex: 1;
-      max-width: 500px;
-      margin-right: 40px;
-    }
-
-    .hero-text h1 {
-      font-size: 3em;
-      color: var(--color-titulos);
+    .hero h1 {
+      font-size: 2.8em;
+      color: var(--primary);
       margin-bottom: 20px;
     }
 
-    .hero-text p {
+    .hero p {
       font-size: 1.2em;
+      max-width: 700px;
       margin-bottom: 30px;
     }
 
-    .hero-text a {
-      background-color: var(--color-boton);
-      padding: 14px 28px;
-      border-radius: 6px;
-      color: var(--color-titulos);
-      font-weight: bold;
+    .hero a {
+      background-color: var(--accent);
+      color: var(--text);
+      padding: 16px 32px;
+      border-radius: 8px;
       text-decoration: none;
-      transition: background-color 0.3s;
+      font-weight: bold;
+      font-size: 1em;
+      transition: background-color 0.3s ease;
     }
 
-    .hero-text a:hover {
-      background-color: #e6cc30;
+    .hero a:hover {
+      background-color: #cfaa2e;
     }
 
-    .hero-img {
-      flex: 1;
-      text-align: center;
-    }
-
-    .hero-img img {
-      max-width: 400px;
-      border-radius: 12px;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-    }
-
-    .services {
-      background-color: var(--color-secundario);
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    .services h2 {
-      font-size: 2.5em;
-      margin-bottom: 40px;
-      color: var(--color-titulos);
-    }
-
-    .service-list {
+    .features {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 40px;
-      max-width: 1000px;
-      margin: auto;
+      padding: 80px 20px;
+      background-color: var(--light);
     }
 
-    .service {
-      background: white;
-      padding: 30px 20px;
-      width: 280px;
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    .feature {
+      width: 300px;
+      text-align: center;
     }
 
-    .service h3 {
-      margin-bottom: 15px;
-      color: var(--color-titulos);
+    .feature h3 {
+      font-size: 1.3em;
+      margin-bottom: 12px;
+      color: var(--primary);
     }
 
-    .service p {
-      font-size: 0.95em;
+    .feature p {
+      font-size: 1em;
+    }
+
+    .testimonials {
+      background-color: #f5f1e7;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .testimonials h2 {
+      color: var(--primary);
+      margin-bottom: 40px;
+      font-size: 2em;
+    }
+
+    .testimonial {
+      max-width: 700px;
+      margin: 0 auto 30px;
+      font-style: italic;
+      color: #444;
+    }
+
+    .cta {
+      background-color: var(--primary);
+      color: var(--light);
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .cta h2 {
+      font-size: 2.2em;
+      margin-bottom: 20px;
+    }
+
+    .cta a {
+      background-color: var(--accent);
+      color: var(--text);
+      padding: 14px 28px;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1.1em;
     }
 
     footer {
-      background-color: var(--color-principal);
-      color: white;
+      background-color: #1f1f1f;
+      color: #bbb;
       text-align: center;
+      font-size: 0.9em;
       padding: 30px 20px;
-      margin-top: 60px;
     }
 
-    footer p {
-      margin: 6px 0;
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
 
     @media (max-width: 768px) {
-      .hero {
+      .features {
         flex-direction: column;
-        padding: 40px 20px;
+        align-items: center;
       }
 
-      .hero-text {
-        margin-right: 0;
-        margin-bottom: 30px;
-      }
-
-      .service-list {
-        flex-direction: column;
-        gap: 20px;
+      .feature {
+        width: 90%;
       }
     }
   </style>
@@ -183,37 +192,46 @@
 </header>
 
 <section class="hero">
-  <div class="hero-text">
-    <h1>Catering fresco y delicioso</h1>
-    <p>Perfecto para bodas, eventos corporativos y celebraciones especiales. Nos encargamos de cada detalle para que usted disfrute al máximo.</p>
-    <a href="#contacto">Solicitar cotización</a>
+  <h1>Catering Premium para Eventos Memorables</h1>
+  <p>Transformamos celebraciones en experiencias inolvidables con sabores exquisitos, presentación impecable y atención de excelencia.</p>
+  <a href="#contacto">Solicita tu cotización</a>
+</section>
+
+<section id="servicios" class="features">
+  <div class="feature">
+    <h3>Menús Personalizados</h3>
+    <p>Creamos experiencias culinarias únicas, adaptadas a tus gustos y tipo de evento.</p>
   </div>
-  <div class="hero-img">
-    <img src="Catee.jpg" alt="Catering profesional" />
+  <div class="feature">
+    <h3>Montaje Profesional</h3>
+    <p>Decoración, ambientación y logística para bodas, eventos corporativos y más.</p>
+  </div>
+  <div class="feature">
+    <h3>Atención Premium</h3>
+    <p>Personal capacitado, puntualidad y servicio de calidad desde el primer contacto.</p>
   </div>
 </section>
 
-<section id="servicios" class="services">
-  <h2>Nuestros Servicios</h2>
-  <div class="service-list">
-    <div class="service">
-      <h3>Buffets Personalizados</h3>
-      <p>Diseñamos buffets que se adaptan a su evento y a los gustos de sus invitados.</p>
-    </div>
-    <div class="service">
-      <h3>Menús Temáticos</h3>
-      <p>Desde cocina nacional hasta internacional, ajustado a su estilo.</p>
-    </div>
-    <div class="service">
-      <h3>Decoración y Ambientación</h3>
-      <p>Montaje completo con ambientación elegante y profesional.</p>
-    </div>
+<section class="testimonials">
+  <h2>Clientes Felices</h2>
+  <div class="testimonial">
+    “ADC hizo de nuestra boda un evento inolvidable. La comida fue excelente y la presentación, espectacular.”
+    <br><strong>– Andrea M.</strong>
   </div>
+  <div class="testimonial">
+    “Servicio muy profesional, atento y organizado. Totalmente recomendable para cualquier tipo de evento.”
+    <br><strong>– Carlos R.</strong>
+  </div>
+</section>
+
+<section id="contacto" class="cta">
+  <h2>Solicita una degustación gratuita</h2>
+  <a href="https://wa.me/593988200116" target="_blank">Contáctanos por WhatsApp</a>
 </section>
 
 <footer>
   <p>© 2025 ADC Eventos. Todos los derechos reservados.</p>
-  <p>Contáctenos en: +593 988200116 | Quito, Ecuador</p>
+  <p><a href="#">Política de privacidad</a> | <a href="#">Términos y condiciones</a></p>
 </footer>
 
 </body>
