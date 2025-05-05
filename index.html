@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ADC Eventos | Catering Premium</title>
+  <title>ADC Eventos | Catering Premium para Celebraciones</title>
   <style>
     :root {
       --primary: #7B2D26;
@@ -11,6 +11,7 @@
       --bg: #FFFDF7;
       --text: #2C2C2C;
       --light: #ffffff;
+      --dark: #1f1f1f;
     }
 
     * {
@@ -23,6 +24,7 @@
       font-family: 'Segoe UI', sans-serif;
       background-color: var(--bg);
       color: var(--text);
+      line-height: 1.6;
     }
 
     header {
@@ -52,9 +54,6 @@
     }
 
     .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
       text-align: center;
       padding: 100px 20px 60px;
       background: linear-gradient(to bottom, #fff, #f8f4eb);
@@ -69,7 +68,7 @@
     .hero p {
       font-size: 1.2em;
       max-width: 700px;
-      margin-bottom: 30px;
+      margin: 0 auto 30px;
     }
 
     .hero a {
@@ -80,11 +79,17 @@
       text-decoration: none;
       font-weight: bold;
       font-size: 1em;
-      transition: background-color 0.3s ease;
     }
 
-    .hero a:hover {
-      background-color: #cfaa2e;
+    .value-prop {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .value-prop h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: var(--primary);
     }
 
     .features {
@@ -92,23 +97,20 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 40px;
-      padding: 80px 20px;
-      background-color: var(--light);
+      margin-top: 40px;
     }
 
     .feature {
-      width: 300px;
-      text-align: center;
+      background: var(--light);
+      padding: 30px;
+      border-radius: 10px;
+      width: 280px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     }
 
     .feature h3 {
-      font-size: 1.3em;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       color: var(--primary);
-    }
-
-    .feature p {
-      font-size: 1em;
     }
 
     .testimonials {
@@ -118,38 +120,27 @@
     }
 
     .testimonials h2 {
-      color: var(--primary);
-      margin-bottom: 40px;
       font-size: 2em;
+      margin-bottom: 30px;
+      color: var(--primary);
     }
 
     .testimonial {
       max-width: 700px;
       margin: 0 auto 30px;
       font-style: italic;
-      color: #444;
     }
 
-    .cta {
+    .offer {
       background-color: var(--primary);
       color: var(--light);
       text-align: center;
       padding: 60px 20px;
     }
 
-    .cta h2 {
-      font-size: 2.2em;
+    .offer h2 {
+      font-size: 2em;
       margin-bottom: 20px;
-    }
-
-    .cta a {
-      background-color: var(--accent);
-      color: var(--text);
-      padding: 14px 28px;
-      border-radius: 6px;
-      font-weight: bold;
-      text-decoration: none;
-      font-size: 1.1em;
     }
 
     .formulario {
@@ -200,7 +191,7 @@
     }
 
     footer {
-      background-color: #1f1f1f;
+      background-color: var(--dark);
       color: #bbb;
       text-align: center;
       font-size: 0.9em;
@@ -239,40 +230,46 @@
 </header>
 
 <section class="hero">
-  <h1>Catering Premium para Eventos Memorables</h1>
-  <p>Transformamos celebraciones en experiencias inolvidables con sabores exquisitos, presentación impecable y atención de excelencia.</p>
-  <a href="#cotizar">Solicita tu cotización</a>
+  <h1>Catering Premium para Celebraciones Inolvidables</h1>
+  <p>Gastronomía exclusiva, presentación impecable y organización integral para que usted solo disfrute.</p>
+  <a href="#cotizar">Solicitar Cotización</a>
 </section>
 
-<section id="servicios" class="features">
-  <div class="feature">
-    <h3>Menús Personalizados</h3>
-    <p>Creamos experiencias culinarias únicas, adaptadas a tus gustos y tipo de evento.</p>
-  </div>
-  <div class="feature">
-    <h3>Montaje Profesional</h3>
-    <p>Decoración, ambientación y logística para bodas, eventos corporativos y más.</p>
-  </div>
-  <div class="feature">
-    <h3>Atención Premium</h3>
-    <p>Personal capacitado, puntualidad y servicio de calidad desde el primer contacto.</p>
+<section class="value-prop" id="servicios">
+  <h2>¿Por qué elegirnos?</h2>
+  <div class="features">
+    <div class="feature">
+      <h3>Menús Personalizados</h3>
+      <p>Gastronomía a medida para cada ocasión, con productos frescos y presentaciones cuidadas.</p>
+    </div>
+    <div class="feature">
+      <h3>Organización Integral</h3>
+      <p>Nos encargamos de todo: montaje, decoración, logística y personal de servicio.</p>
+    </div>
+    <div class="feature">
+      <h3>Calidad Garantizada</h3>
+      <p>Más de 10 años de experiencia y cientos de clientes satisfechos avalan nuestro trabajo.</p>
+    </div>
   </div>
 </section>
 
 <section class="testimonials">
-  <h2>Clientes Felices</h2>
+  <h2>Testimonios Reales</h2>
   <div class="testimonial">
-    “ADC hizo de nuestra boda un evento inolvidable. La comida fue excelente y la presentación, espectacular.”
-    <br><strong>– Andrea M.</strong>
+    “El servicio fue excelente, la comida deliciosa y la atención insuperable. ¡Recomendadísimos!”<br><strong>– Daniela L.</strong>
   </div>
   <div class="testimonial">
-    “Servicio muy profesional, atento y organizado. Totalmente recomendable para cualquier tipo de evento.”
-    <br><strong>– Carlos R.</strong>
+    “Organizaron todo con detalle y puntualidad. Superaron mis expectativas por completo.”<br><strong>– Marco P.</strong>
   </div>
 </section>
 
+<section class="offer">
+  <h2>Oferta Limitada</h2>
+  <p>Solicite su cotización hoy y reciba una <strong>degustación gratuita</strong> para 2 personas.</p>
+</section>
+
 <section id="cotizar" class="formulario">
-  <h2>Solicita tu cotización personalizada</h2>
+  <h2>Formulario de Cotización</h2>
   <form onsubmit="enviarPorWhatsapp(); return false;">
     <input type="text" id="nombre" placeholder="Nombre completo" required>
     <input type="tel" id="telefono" placeholder="Número de WhatsApp" required>
