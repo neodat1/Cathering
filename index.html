@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ADC Eventos | Catering y Organización de Eventos</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ADC Eventos | Catering Profesional para Eventos</title>
   <style>
     * {
       margin: 0;
@@ -13,29 +14,31 @@
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #FDF6EC; /* Marfil */
-      color: #2C2C2C; /* Gris carbón */
+      background-color: #FDF6EC;
+      color: #2C2C2C;
+      line-height: 1.6;
     }
 
     header {
-      background-color: #7B2D26; /* Vino */
-      padding: 15px 30px;
+      background-color: #7B2D26;
+      padding: 20px 40px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-bottom: 2px solid #E1B530; /* Mostaza */
+      border-bottom: 3px solid #E1B530;
     }
 
     .logo {
-      height: 50px;
+      height: 60px;
     }
 
     nav a {
       color: #FDF6EC;
-      margin-left: 20px;
+      margin-left: 30px;
       text-decoration: none;
-      font-weight: 500;
-      font-size: 16px;
+      font-weight: 600;
+      font-size: 17px;
+      transition: color 0.3s ease;
     }
 
     nav a:hover {
@@ -44,110 +47,123 @@
 
     .hero {
       text-align: center;
-      padding: 60px 20px;
-      background: linear-gradient(to bottom, #A6B49A, #FDF6EC); /* Verde salvia a marfil */
+      padding: 80px 20px;
+      background: linear-gradient(to bottom, #A6B49A, #FDF6EC);
     }
 
     .hero h1 {
-      font-size: 2.5em;
+      font-size: 3em;
       color: #7B2D26;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
 
     .hero p {
-      font-size: 1.2em;
-      color: #2C2C2C;
-      margin-bottom: 30px;
+      font-size: 1.3em;
+      margin-bottom: 40px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .hero img {
       width: 100%;
-      max-width: 500px;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(123, 45, 38, 0.5); /* Sombra vino */
+      max-width: 550px;
+      border-radius: 12px;
+      box-shadow: 0 4px 30px rgba(123, 45, 38, 0.4);
     }
 
     section {
-      padding: 50px 20px;
+      padding: 60px 20px;
       text-align: center;
     }
 
     h2 {
       color: #7B2D26;
-      margin-bottom: 20px;
-      font-size: 2em;
+      font-size: 2.2em;
+      margin-bottom: 25px;
     }
 
     .benefits ul {
       list-style: none;
-      max-width: 700px;
+      max-width: 800px;
       margin: auto;
       padding: 0;
     }
 
     .benefits li {
-      margin-bottom: 12px;
-      font-size: 1.1em;
-      color: #2C2C2C;
+      font-size: 1.15em;
+      margin-bottom: 16px;
     }
 
     .testimonials blockquote {
       background-color: #A6B49A;
-      border-left: 5px solid #E1B530;
-      margin: 20px auto;
-      padding: 20px;
+      border-left: 6px solid #E1B530;
+      margin: 25px auto;
+      padding: 25px;
       font-style: italic;
-      max-width: 700px;
-      color: #2C2C2C;
+      max-width: 750px;
+      border-radius: 6px;
+    }
+
+    .testimonials strong {
+      display: block;
+      margin-top: 12px;
+      font-weight: bold;
     }
 
     .special-offer p {
       background-color: #7B2D26;
       color: #FDF6EC;
-      padding: 20px;
-      border-radius: 8px;
       display: inline-block;
-      font-size: 1.2em;
-      border: 1px solid #E1B530;
+      padding: 22px 30px;
+      font-size: 1.25em;
+      border-radius: 10px;
+      border: 2px solid #E1B530;
+      margin-top: 20px;
     }
 
     .contact-form form {
-      max-width: 600px;
+      max-width: 650px;
       margin: auto;
       display: flex;
       flex-direction: column;
+      gap: 16px;
     }
 
     .contact-form input,
     .contact-form select,
     .contact-form textarea {
-      padding: 14px;
-      margin-bottom: 15px;
-      background-color: #FDF6EC;
-      color: #2C2C2C;
+      padding: 16px;
       border: 1px solid #A6B49A;
-      border-radius: 6px;
+      border-radius: 8px;
       font-size: 16px;
+      background-color: #ffffff;
+      color: #2C2C2C;
     }
 
     .contact-form button {
-      padding: 14px;
+      padding: 16px;
       background-color: #E1B530;
       color: #2C2C2C;
-      font-size: 1em;
       border: none;
-      border-radius: 6px;
-      cursor: pointer;
       font-weight: bold;
+      font-size: 1em;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
     }
 
     .contact-form button:hover {
-      background-color: #cba629;
+      background-color: #d1a626;
+    }
+
+    .contact-data {
+      margin-top: 30px;
     }
 
     .contact-data p {
-      color: #2C2C2C;
-      margin: 8px 0;
+      font-size: 1em;
+      margin: 6px 0;
     }
 
     footer {
@@ -155,12 +171,12 @@
       color: #FDF6EC;
       padding: 30px 20px;
       text-align: center;
-      font-size: 0.9em;
     }
 
     footer a {
       color: #E1B530;
       text-decoration: none;
+      margin: 0 5px;
     }
 
     footer a:hover {
@@ -170,103 +186,102 @@
 </head>
 <body>
 
-  <header>
-    <img src="Catee.jpg" alt="ADC Eventos Logo" class="logo">
-    <nav>
-      <a href="#servicios">Servicios</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </header>
+<header>
+  <img src="Catee.jpg" alt="ADC Eventos Logo" class="logo" />
+  <nav>
+    <a href="#servicios">Servicios</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
 
-  <section class="hero">
-    <h1>¡Haz de tu evento un recuerdo inolvidable!</h1>
-    <p>Experiencia, elegancia y sabor en cada celebración. Catering completo para quienes valoran lo mejor.</p>
-    <img src="Catee.jpg" alt="Imagen de evento ADC">
-  </section>
+<section class="hero">
+  <h1>Transformamos tu evento en una experiencia inolvidable</h1>
+  <p>Desde bodas elegantes hasta eventos corporativos, nuestro servicio de catering ofrece excelencia culinaria, presentación impecable y atención al detalle.</p>
+  <img src="Catee.jpg" alt="Catering profesional ADC" />
+</section>
 
-  <section id="servicios" class="benefits">
-    <h2>¿Qué ofrecemos?</h2>
-    <ul>
-      <li>✅ Menús gourmet y tradicionales ecuatorianos.</li>
-      <li>✅ Opciones para invitados con dietas especiales.</li>
-      <li>✅ Servicio integral: decoración, montaje y personal.</li>
-      <li>✅ Ingredientes frescos, presentación impecable.</li>
-      <li>✅ Eventos familiares, sociales y empresariales.</li>
-    </ul>
-  </section>
+<section id="servicios" class="benefits">
+  <h2>Nuestros Servicios</h2>
+  <ul>
+    <li>✅ Menús personalizados: gourmet, tradicionales y dietas especiales.</li>
+    <li>✅ Servicio completo: logística, ambientación y personal capacitado.</li>
+    <li>✅ Ingredientes frescos, locales y de alta calidad.</li>
+    <li>✅ Eventos sociales, empresariales y familiares.</li>
+  </ul>
+</section>
 
-  <section class="testimonials">
-    <h2>Clientes felices</h2>
-    <blockquote>
-      “La mejor decisión para nuestra boda. Todo fue perfecto: comida, atención y ambientación.”
-      <br><strong>– Andrea Paredes, Quito</strong>
-    </blockquote>
-    <blockquote>
-      “Súper puntuales y organizados. Mi familia quedó encantada con el servicio de ADC.”
-      <br><strong>– Luis Cevallos, San Rafael</strong>
-    </blockquote>
-  </section>
+<section class="testimonials">
+  <h2>Testimonios</h2>
+  <blockquote>
+    “ADC hizo de nuestra boda un evento mágico. La comida fue deliciosa y el servicio excepcional.”
+    <strong>– Andrea Paredes, Quito</strong>
+  </blockquote>
+  <blockquote>
+    “Excelente atención y profesionalismo. Mi empresa quedó encantada con la organización del evento.”
+    <strong>– Luis Cevallos, San Rafael</strong>
+  </blockquote>
+</section>
 
-  <section class="special-offer">
-    <h2>Oferta exclusiva</h2>
-    <p>Solicita tu cotización hoy y recibe una <strong>degustación gratuita</strong>.</p>
-  </section>
+<section class="special-offer">
+  <h2>Promoción del Mes</h2>
+  <p>Solicita tu cotización y obtén una <strong>degustación gratuita</strong> para 2 personas.</p>
+</section>
 
-  <section id="contacto" class="contact-form">
-    <h2>Solicita Cotización por WhatsApp</h2>
-    <form onsubmit="enviarPorWhatsapp(); return false;">
-      <input type="text" id="nombre" placeholder="Nombre completo" required>
-      <input type="tel" id="telefono" placeholder="Número de teléfono" required>
-      <input type="email" id="correo" placeholder="Correo electrónico" required>
-      <select id="tipo_evento" required>
-        <option value="">Tipo de evento</option>
-        <option value="Boda">Boda</option>
-        <option value="Cumpleaños">Cumpleaños</option>
-        <option value="Empresarial">Empresarial</option>
-        <option value="Otro">Otro</option>
-      </select>
-      <input type="number" id="invitados" placeholder="Número de invitados" required>
-      <input type="date" id="fecha_evento" required>
-      <textarea id="mensaje" placeholder="Mensaje adicional (opcional)"></textarea>
-      <button type="submit">Enviar por WhatsApp</button>
-    </form>
-  </section>
+<section id="contacto" class="contact-form">
+  <h2>Solicita tu Cotización</h2>
+  <form onsubmit="enviarPorWhatsapp(); return false;">
+    <input type="text" id="nombre" placeholder="Nombre completo" required />
+    <input type="tel" id="telefono" placeholder="Teléfono" required />
+    <input type="email" id="correo" placeholder="Correo electrónico" required />
+    <select id="tipo_evento" required>
+      <option value="">Tipo de evento</option>
+      <option value="Boda">Boda</option>
+      <option value="Cumpleaños">Cumpleaños</option>
+      <option value="Empresarial">Empresarial</option>
+      <option value="Otro">Otro</option>
+    </select>
+    <input type="number" id="invitados" placeholder="Número de invitados" required />
+    <input type="date" id="fecha_evento" required />
+    <textarea id="mensaje" placeholder="Mensaje adicional (opcional)"></textarea>
+    <button type="submit">Enviar por WhatsApp</button>
+  </form>
+</section>
 
-  <section class="contact-data">
-    <p><strong>WhatsApp:</strong> +593 988200116</p>
-    <p><strong>Teléfono:</strong> (02) 234-5678</p>
-    <p><strong>Instagram:</strong> @adc_eventos</p>
-  </section>
+<section class="contact-data">
+  <p><strong>WhatsApp:</strong> +593 988200116</p>
+  <p><strong>Teléfono:</strong> (02) 234-5678</p>
+  <p><strong>Instagram:</strong> @adc_eventos</p>
+</section>
 
-  <footer>
-    <p>© 2025 ADC Eventos. Todos los derechos reservados.</p>
-    <p><a href="#">Política de privacidad</a> | <a href="#">Términos y condiciones</a></p>
-    <p>Quito, Ecuador</p>
-  </footer>
+<footer>
+  <p>© 2025 ADC Eventos. Todos los derechos reservados.</p>
+  <p><a href="#">Política de privacidad</a> | <a href="#">Términos y condiciones</a></p>
+  <p>Quito, Ecuador</p>
+</footer>
 
-  <script>
-    function enviarPorWhatsapp() {
-      const nombre = document.getElementById("nombre").value;
-      const telefono = document.getElementById("telefono").value;
-      const correo = document.getElementById("correo").value;
-      const tipo = document.getElementById("tipo_evento").value;
-      const invitados = document.getElementById("invitados").value;
-      const fecha = document.getElementById("fecha_evento").value;
-      const mensaje = document.getElementById("mensaje").value;
+<script>
+  function enviarPorWhatsapp() {
+    const nombre = document.getElementById("nombre").value;
+    const telefono = document.getElementById("telefono").value;
+    const correo = document.getElementById("correo").value;
+    const tipo = document.getElementById("tipo_evento").value;
+    const invitados = document.getElementById("invitados").value;
+    const fecha = document.getElementById("fecha_evento").value;
+    const mensaje = document.getElementById("mensaje").value;
 
-      const texto = `Hola, soy ${nombre}%0A` +
-                    `Quisiera una cotización para un evento tipo: *${tipo}*%0A` +
-                    `Fecha: ${fecha}%0A` +
-                    `Invitados: ${invitados}%0A` +
-                    `Teléfono: ${telefono}%0A` +
-                    `Correo: ${correo}%0A` +
-                    `Mensaje: ${mensaje}`;
+    const texto = `Hola, soy ${nombre}%0A` +
+                  `Quisiera una cotización para un evento tipo: *${tipo}*%0A` +
+                  `Fecha: ${fecha}%0A` +
+                  `Invitados: ${invitados}%0A` +
+                  `Teléfono: ${telefono}%0A` +
+                  `Correo: ${correo}%0A` +
+                  `Mensaje: ${mensaje}`;
 
-      const numero = "593988200116";
-      const url = `https://wa.me/${numero}?text=${texto}`;
-      window.open(url, "_blank");
-    }
-  </script>
+    const numero = "593988200116";
+    const url = `https://wa.me/${numero}?text=${texto}`;
+    window.open(url, "_blank");
+  }
+</script>
 
 </body>
 </html>
