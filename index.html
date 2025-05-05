@@ -152,6 +152,53 @@
       font-size: 1.1em;
     }
 
+    .formulario {
+      background-color: #fff8e5;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .formulario h2 {
+      font-size: 2em;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    form {
+      max-width: 600px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    input, select, textarea {
+      padding: 14px;
+      border-radius: 6px;
+      border: none;
+      font-size: 1em;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      background-color: var(--accent);
+      color: var(--text);
+      font-weight: bold;
+      font-size: 1em;
+      padding: 14px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #d6b12f;
+    }
+
     footer {
       background-color: #1f1f1f;
       color: #bbb;
@@ -187,14 +234,14 @@
   <div class="logo">ADC Eventos</div>
   <nav>
     <a href="#servicios">Servicios</a>
-    <a href="#contacto">Contacto</a>
+    <a href="#cotizar">Cotizar</a>
   </nav>
 </header>
 
 <section class="hero">
   <h1>Catering Premium para Eventos Memorables</h1>
   <p>Transformamos celebraciones en experiencias inolvidables con sabores exquisitos, presentación impecable y atención de excelencia.</p>
-  <a href="#contacto">Solicita tu cotización</a>
+  <a href="#cotizar">Solicita tu cotización</a>
 </section>
 
 <section id="servicios" class="features">
@@ -224,15 +271,54 @@
   </div>
 </section>
 
-<section id="contacto" class="cta">
-  <h2>Solicita una degustación gratuita</h2>
-  <a href="https://wa.me/593988200116" target="_blank">Contáctanos por WhatsApp</a>
+<section id="cotizar" class="formulario">
+  <h2>Solicita tu cotización personalizada</h2>
+  <form onsubmit="enviarPorWhatsapp(); return false;">
+    <input type="text" id="nombre" placeholder="Nombre completo" required>
+    <input type="tel" id="telefono" placeholder="Número de WhatsApp" required>
+    <input type="email" id="correo" placeholder="Correo electrónico" required>
+    <select id="tipo_evento" required>
+      <option value="">Tipo de evento</option>
+      <option value="Boda">Boda</option>
+      <option value="Cumpleaños">Cumpleaños</option>
+      <option value="Empresarial">Empresarial</option>
+      <option value="Otro">Otro</option>
+    </select>
+    <input type="number" id="invitados" placeholder="Número de invitados" required>
+    <input type="date" id="fecha_evento" required>
+    <textarea id="mensaje" placeholder="Mensaje adicional (opcional)" rows="3"></textarea>
+    <button type="submit">Enviar por WhatsApp</button>
+  </form>
 </section>
 
 <footer>
   <p>© 2025 ADC Eventos. Todos los derechos reservados.</p>
   <p><a href="#">Política de privacidad</a> | <a href="#">Términos y condiciones</a></p>
 </footer>
+
+<script>
+  function enviarPorWhatsapp() {
+    const nombre = document.getElementById("nombre").value;
+    const telefono = document.getElementById("telefono").value;
+    const correo = document.getElementById("correo").value;
+    const tipo = document.getElementById("tipo_evento").value;
+    const invitados = document.getElementById("invitados").value;
+    const fecha = document.getElementById("fecha_evento").value;
+    const mensaje = document.getElementById("mensaje").value;
+
+    const texto = `Hola, soy ${nombre}%0A` +
+                  `Quisiera una cotización para un evento tipo: *${tipo}*%0A` +
+                  `Fecha: ${fecha}%0A` +
+                  `Invitados: ${invitados}%0A` +
+                  `Teléfono: ${telefono}%0A` +
+                  `Correo: ${correo}%0A` +
+                  `Mensaje: ${mensaje}`;
+
+    const numero = "593988200116";
+    const url = `https://wa.me/${numero}?text=${texto}`;
+    window.open(url, "_blank");
+  }
+</script>
 
 </body>
 </html>
