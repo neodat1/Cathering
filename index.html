@@ -40,19 +40,27 @@ header {
 }
 
 
-    
-    .logo {
-      font-size: 1.6em;
-      font-weight: bold;
-      color: var(--primary);
-    }
 
-    .logo img {
-      height: 48px;        /* altura controlada */
-      max-width: 160px;    /* evita que crezca horizontalmente */
-      object-fit: contain; /* mantiene proporciones */
-      display: block;
-    }
+
+    .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 36px;
+  width: 36px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.logo span {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: var(--primary);
+  white-space: nowrap;
+}
 
 
     nav a {
@@ -309,9 +317,12 @@ header {
 
 <header>
 
-  <div class="logo">
-  <img src="Catee.jpg" alt="ADC Eventos" />
-  </div>
+<div class="logo">
+  <img src="Catee.jpg" alt="Logo ADC" />
+  <span>ADC <strong>Eventos</strong></span>
+</div>
+
+  
 
   <div class="logo">ADC Eventos</div>
   <nav>
