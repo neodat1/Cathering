@@ -1,439 +1,360 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ADC Eventos | Catering Premium para Celebraciones</title>
-  <link rel="icon" type="image/png" href="Catee.jpg" />
-  <style>
-    :root {
-      --primary: #7B2D26;
-      --accent: #E1B530;
-      --bg: #FFFDF7;
-      --text: #2C2C2C;
-      --light: #ffffff;
-      --dark: #1f1f1f;
-    }
-
-
-
-    
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-header {
-  padding: 10px 34px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--light);
-}
-
-
-
-
-    .logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo img {
-  height: 36px;
-  width: 36px;
-  object-fit: contain;
-  border-radius: 4px;
-}
-
-.logo span {
-  font-size: 1.3em;
-  font-weight: bold;
-  color: var(--primary);
-  white-space: nowrap;
-}
-
-
-    nav a {
-      margin-left: 30px;
-      text-decoration: none;
-      color: var(--text);
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      color: var(--accent);
-    }
-
-.hero {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 60vh; /* altura completa de la pantalla */
-  text-align: center;
-  padding: 10px;
-  background: url('cathe.jpeg') center/cover no-repeat;
-  color: var(--light);
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1;
-}
-
-.hero h1,
-.hero p,
-.hero a {
-  position: relative;
-  z-index: 2;
-}
-
-.hero h1 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-.hero p {
-  font-size: 1.1em;
-  max-width: 700px;
-  margin-bottom: 30px;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-}
-
-.hero a {
-  background-color: var(--accent);
-  color: var(--text);
-  padding: 14px 28px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1em;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-}
-
-    .value-prop {
-      padding: 80px 20px;
-      text-align: center;
-    }
-
-    .value-prop h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
-      color: var(--primary);
-    }
-
-    .features {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 40px;
-      margin-top: 40px;
-    }
-
-    .feature {
-      background: var(--light);
-      padding: 30px;
-      border-radius: 10px;
-      width: 280px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    }
-
-    .feature h3 {
-      margin-bottom: 10px;
-      color: var(--primary);
-    }
-
-    .testimonials {
-      background-color: #f5f1e7;
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    .testimonials h2 {
-      font-size: 2em;
-      margin-bottom: 30px;
-      color: var(--primary);
-    }
-
-    .testimonial {
-      max-width: 700px;
-      margin: 0 auto 30px;
-      font-style: italic;
-    }
-
-
-
-
-    
-    .offer {
-      background-color: var(--primary);
-      color: var(--light);
-      text-align: center;
-      padding: 60px 20px;
-    }
-
-    .offer h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
-    }
-
-    .formulario {
-      background-color: #fff8e5;
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    .formulario h2 {
-      font-size: 2em;
-      color: var(--primary);
-      margin-bottom: 20px;
-    }
-
-    form {
-      max-width: 600px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      margin-top: 30px;
-    }
-
-    input, select, textarea {
-      padding: 14px;
-      border-radius: 6px;
-      border: none;
-      font-size: 1em;
-    }
-
-    textarea {
-      resize: vertical;
-    }
-
-    button {
-      background-color: var(--accent);
-      color: var(--text);
-      font-weight: bold;
-      font-size: 1em;
-      padding: 14px;
-      border-radius: 6px;
-      border: none;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #d6b12f;
-    }
-
-    footer {
-      background-color: var(--dark);
-      color: #bbb;
-      text-align: center;
-      font-size: 0.9em;
-      padding: 30px 20px;
-    }
-
-    footer a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-        .form-grid {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 16px;
-        }
-        
-        @media (max-width: 768px) {
-          .form-grid {
-            grid-template-columns: 1fr;
-          }
-        }
-
-
-.testimonial {
-  max-width: 700px;
-  margin: 30px auto;
-  text-align: center;
-  padding: 20px;
-  background-color: #f8f4eb;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.testimonial-img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 15px;
-  border: 3px solid var(--accent);
-}
-
-
-
-.oferta-animada {
-  animation: resplandor 2s infinite alternate ease-in-out;
-  color: #fff;
-  font-weight: bold;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 223, 0, 0.4);
-}
-
-@keyframes resplandor {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4), 0 0 15px rgba(255, 223, 0, 0.3);
-    transform: scale(1);
-  }
-  100% {
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 223, 0, 0.6);
-    transform: scale(1.04);
-  }
-}
-
-
-    
-
-  </style>
-</head>
-<body>
-
-<header>
-
-<div class="logo">
-  <img src="Catee.jpg" alt="Logo ADC" />
-  <span>ADC <strong>Eventos</strong></span>
-</div>
-
-  
-
-  <div class="logo">ADC Eventos</div>
-  <nav>
-    <a href="#servicios">Servicios</a>
-    <a href="#cotizar">Cotizar</a>
-  </nav>
-</header>
-
-<section class="hero">
-  <h1>Catering Premium para Celebraciones Inolvidables</h1>
-  <p>Gastronomía de alto nivel, presentación impecable y organización integral para que usted solo disfrute.</p>
-  <a href="#cotizar">Solicitar Cotización</a>
-</section>
-
-<section class="value-prop" id="servicios">
-  <h2>¿Por qué elegirnos?</h2>
-  <div class="features">
-    <div class="feature">
-      <h3>Menús Personalizados</h3>
-      <p>Gastronomía a medida para cada ocasión, con productos frescos y presentaciones elegantes.</p>
-    </div>
-    <div class="feature">
-      <h3>Organización Integral</h3>
-      <p>Nos encargamos de todo: montaje, decoración, logística y personal de servicio.</p>
-    </div>
-    <div class="feature">
-      <h3>Calidad Garantizada</h3>
-      <p>Más de 10 años de experiencia y cientos de clientes satisfechos avalan nuestro trabajo.</p>
-    </div>
-  </div>
-</section>
-
-<section class="testimonials">
-  <h2>Testimonios Reales</h2>
-
-  <div class="testimonial">
-    <img src="mujer.jpg" alt="mujer" class="testimonial-img" />
-    <p>“El servicio fue excelente, la comida deliciosa y la atención insuperable. ¡Recomendadísimos!”</p>
-    <strong>– Daniela L.</strong>
-  </div>
-
-  <div class="testimonial">
-    <img src="hombre.jpg" alt="hombre" class="testimonial-img" />
-    <p>“Excelente organización, presentación impecable y sabores que encantaron a todos.”</p>
-    <strong>– Marco P.</strong>
-  </div>
-</section>
-
-  <section class="offer">
-  <h2 class="oferta-animada">🎁 Oferta Limitada 🎁</h2>
-  <p>Solicite su cotización hoy y reciba una <strong>degustación gratuita</strong> para 2 personas.</p>
-</section>
-
-
-
-  
-<section id="cotizar" class="formulario">
-  <h2>Solicite su Cotización Personalizada</h2>
-  <p style="font-size: 1.05em; max-width: 600px; margin: 0 auto 30px;">
-    Complete el siguiente formulario y nos pondremos en contacto en menos de 24 horas.
-  </p>
-
-<form onsubmit="enviarPorWhatsapp(); return false;">
-  <div class="form-grid">
-    <input type="text" id="nombre" placeholder="Nombre completo" required />
-    <input type="tel" id="telefono" placeholder="Número de WhatsApp" required />
-    <input type="email" id="correo" placeholder="Correo electrónico" required />
-    <select id="tipo_evento" required>
-      <option value="">Tipo de evento</option>
-      <option value="Boda">Boda</option>
-      <option value="Cumpleaños">Cumpleaños</option>
-      <option value="Empresarial">Empresarial</option>
-      <option value="Otro">Otro</option>
-    </select>
-    <input type="number" id="invitados" placeholder="Número de invitados" inputmode="numeric" required />
-    <input type="date" id="fecha_evento" required />
-  </div>
-  <textarea id="mensaje" placeholder="Mensaje adicional (opcional)" rows="4" style="margin-top: 16px;"></textarea>
-  <button type="submit" style="margin-top: 24px;">Enviar por WhatsApp</button>
-</form>
-</section>
-
-
-<footer>
-  <p>© 2025 ADC Eventos. Todos los derechos reservados.</p>
-  <p><a href="#">Política de privacidad</a> | <a href="#">Términos y condiciones</a></p>
-</footer>
-
-<script>
-  function enviarPorWhatsapp() {
-    const nombre = document.getElementById("nombre").value;
-    const telefono = document.getElementById("telefono").value;
-    const correo = document.getElementById("correo").value;
-    const tipo = document.getElementById("tipo_evento").value;
-    const invitados = document.getElementById("invitados").value;
-    const fecha = document.getElementById("fecha_evento").value;
-    const mensaje = document.getElementById("mensaje").value;
-
-    const texto = `*Hola, soy* ${nombre}%0A` +
-                  `*Tipo de evento:* ${tipo}%0A` +
-                  `*Fecha:* ${fecha}%0A` +
-                  `*Invitados:* ${invitados}%0A` +
-                  `*Teléfono:* ${telefono}%0A` +
-                  `*Correo:* ${correo}%0A` +
-                  `*Mensaje:* ${mensaje}`;
-
-    const numero = "593988200116";
-    const url = `https://wa.me/${numero}?text=${texto}`;
-    window.open(url, "_blank");
-  }
-</script>
-
-</body>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>ADC Eventos | Catering Premium para Celebraciones</title>
+      <link rel="icon" type="image/png" href="Catee.jpg" />
+      <style>
+         :root {
+         --primary: #7B2D26;
+         --accent: #E1B530;
+         --bg: #FFFDF7;
+         --text: #2C2C2C;
+         --light: #ffffff;
+         --dark: #1f1f1f;
+         }
+         * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         }
+         body {
+         font-family: 'Segoe UI', sans-serif;
+         background-color: var(--bg);
+         color: var(--text);
+         line-height: 1.6;
+         }
+         header {
+         padding: 10px 34px;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         background-color: var(--light);
+         }
+         .logo {
+         display: flex;
+         align-items: center;
+         gap: 10px;
+         }
+         .logo img {
+         height: 36px;
+         width: 36px;
+         object-fit: contain;
+         border-radius: 4px;
+         }
+         .logo span {
+         font-size: 1.3em;
+         font-weight: bold;
+         color: var(--primary);
+         white-space: nowrap;
+         }
+         nav a {
+         margin-left: 30px;
+         text-decoration: none;
+         color: var(--text);
+         font-weight: 500;
+         }
+         nav a:hover {
+         color: var(--accent);
+         }
+         .hero {
+         position: relative;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         height: 60vh; /* altura completa de la pantalla */
+         text-align: center;
+         padding: 10px;
+         background: url('cathe.jpeg') center/cover no-repeat;
+         color: var(--light);
+         }
+         .hero::before {
+         content: "";
+         position: absolute;
+         top: 0; left: 0; right: 0; bottom: 0;
+         background: rgba(0, 0, 0, 0.5);
+         z-index: 1;
+         }
+         .hero h1,
+         .hero p,
+         .hero a {
+         position: relative;
+         z-index: 2;
+         }
+         .hero h1 {
+         font-size: 2.5em;
+         margin-bottom: 20px;
+         text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+         }
+         .hero p {
+         font-size: 1.1em;
+         max-width: 700px;
+         margin-bottom: 30px;
+         text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+         }
+         .hero a {
+         background-color: var(--accent);
+         color: var(--text);
+         padding: 14px 28px;
+         border-radius: 8px;
+         text-decoration: none;
+         font-weight: bold;
+         font-size: 1em;
+         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+         }
+         .value-prop {
+         padding: 80px 20px;
+         text-align: center;
+         }
+         .value-prop h2 {
+         font-size: 2em;
+         margin-bottom: 20px;
+         color: var(--primary);
+         }
+         .features {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         gap: 40px;
+         margin-top: 40px;
+         }
+         .feature {
+         background: var(--light);
+         padding: 30px;
+         border-radius: 10px;
+         width: 280px;
+         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+         }
+         .feature h3 {
+         margin-bottom: 10px;
+         color: var(--primary);
+         }
+         .testimonials {
+         background-color: #f5f1e7;
+         padding: 60px 20px;
+         text-align: center;
+         }
+         .testimonials h2 {
+         font-size: 2em;
+         margin-bottom: 30px;
+         color: var(--primary);
+         }
+         .testimonial {
+         max-width: 700px;
+         margin: 0 auto 30px;
+         font-style: italic;
+         }
+         .offer {
+         background-color: var(--primary);
+         color: var(--light);
+         text-align: center;
+         padding: 60px 20px;
+         }
+         .offer h2 {
+         font-size: 2em;
+         margin-bottom: 20px;
+         }
+         .formulario {
+         background-color: #fff8e5;
+         padding: 60px 20px;
+         text-align: center;
+         }
+         .formulario h2 {
+         font-size: 2em;
+         color: var(--primary);
+         margin-bottom: 20px;
+         }
+         form {
+         max-width: 600px;
+         margin: auto;
+         display: flex;
+         flex-direction: column;
+         gap: 16px;
+         margin-top: 30px;
+         }
+         input, select, textarea {
+         padding: 14px;
+         border-radius: 6px;
+         border: none;
+         font-size: 1em;
+         }
+         textarea {
+         resize: vertical;
+         }
+         button {
+         background-color: var(--accent);
+         color: var(--text);
+         font-weight: bold;
+         font-size: 1em;
+         padding: 14px;
+         border-radius: 6px;
+         border: none;
+         cursor: pointer;
+         }
+         button:hover {
+         background-color: #d6b12f;
+         }
+         footer {
+         background-color: var(--dark);
+         color: #bbb;
+         text-align: center;
+         font-size: 0.9em;
+         padding: 30px 20px;
+         }
+         footer a {
+         color: var(--accent);
+         text-decoration: none;
+         }
+         footer a:hover {
+         text-decoration: underline;
+         }
+         .form-grid {
+         display: grid;
+         grid-template-columns: repeat(2, 1fr);
+         gap: 16px;
+         }
+         @media (max-width: 768px) {
+         .form-grid {
+         grid-template-columns: 1fr;
+         }
+         }
+         .testimonial {
+         max-width: 700px;
+         margin: 30px auto;
+         text-align: center;
+         padding: 20px;
+         background-color: #f8f4eb;
+         border-radius: 10px;
+         box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+         }
+         .testimonial-img {
+         width: 80px;
+         height: 80px;
+         border-radius: 50%;
+         object-fit: cover;
+         margin-bottom: 15px;
+         border: 3px solid var(--accent);
+         }
+         .oferta-animada {
+         animation: resplandor 2s infinite alternate ease-in-out;
+         color: #fff;
+         font-weight: bold;
+         text-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 223, 0, 0.4);
+         }
+         @keyframes resplandor {
+         0% {
+         text-shadow: 0 0 10px rgba(255, 255, 255, 0.4), 0 0 15px rgba(255, 223, 0, 0.3);
+         transform: scale(1);
+         }
+         100% {
+         text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 223, 0, 0.6);
+         transform: scale(1.04);
+         }
+         }
+      </style>
+   </head>
+   <body>
+      <header>
+         <div class="logo">
+            <img src="Catee.jpg" alt="Logo ADC" />
+            <span>ADC <strong>Eventos</strong></span>
+         </div>
+         <nav>
+            <a href="#servicios">Servicios</a>
+            <a href="#cotizar">Cotizar</a>
+         </nav>
+      </header>
+      <section class="hero">
+         <h1>Catering Premium para Celebraciones Inolvidables</h1>
+         <p>Gastronomía de alto nivel, presentación impecable y organización integral para que usted solo disfrute.</p>
+         <a href="#cotizar">Solicitar Cotización</a>
+      </section>
+      <section class="value-prop" id="servicios">
+         <h2>¿Por qué elegirnos?</h2>
+         <div class="features">
+            <div class="feature">
+               <h3>Menús Personalizados</h3>
+               <p>Gastronomía a medida para cada ocasión, con productos frescos y presentaciones elegantes.</p>
+            </div>
+            <div class="feature">
+               <h3>Organización Integral</h3>
+               <p>Nos encargamos de todo: montaje, decoración, logística y personal de servicio.</p>
+            </div>
+            <div class="feature">
+               <h3>Calidad Garantizada</h3>
+               <p>Más de 10 años de experiencia y cientos de clientes satisfechos avalan nuestro trabajo.</p>
+            </div>
+         </div>
+      </section>
+      <section class="testimonials">
+         <h2>Testimonios Reales</h2>
+         <div class="testimonial">
+            <img src="mujer.jpg" alt="mujer" class="testimonial-img" />
+            <p>“El servicio fue excelente, la comida deliciosa y la atención insuperable. ¡Recomendadísimos!”</p>
+            <strong>– Daniela L.</strong>
+         </div>
+         <div class="testimonial">
+            <img src="hombre.jpg" alt="hombre" class="testimonial-img" />
+            <p>“Excelente organización, presentación impecable y sabores que encantaron a todos.”</p>
+            <strong>– Marco P.</strong>
+         </div>
+      </section>
+      <section class="offer">
+         <h2 class="oferta-animada">🎁 Oferta Limitada 🎁</h2>
+         <p>Solicite su cotización hoy y reciba una <strong>degustación gratuita</strong> para 2 personas.</p>
+      </section>
+      <section id="cotizar" class="formulario">
+         <h2>Solicite su Cotización Personalizada</h2>
+         <p style="font-size: 1.05em; max-width: 600px; margin: 0 auto 30px;">
+            Complete el siguiente formulario y nos pondremos en contacto en menos de 24 horas.
+         </p>
+         <form onsubmit="enviarPorWhatsapp(); return false;">
+            <div class="form-grid">
+               <input type="text" id="nombre" placeholder="Nombre completo" required />
+               <input type="tel" id="telefono" placeholder="Número de WhatsApp" required />
+               <input type="email" id="correo" placeholder="Correo electrónico" required />
+               <select id="tipo_evento" required>
+                  <option value="">Tipo de evento</option>
+                  <option value="Boda">Boda</option>
+                  <option value="Cumpleaños">Cumpleaños</option>
+                  <option value="Empresarial">Empresarial</option>
+                  <option value="Otro">Otro</option>
+               </select>
+               <input type="number" id="invitados" placeholder="Número de invitados" inputmode="numeric" required />
+               <input type="date" id="fecha_evento" required />
+            </div>
+            <textarea id="mensaje" placeholder="Mensaje adicional (opcional)" rows="4" style="margin-top: 16px;"></textarea>
+            <button type="submit" style="margin-top: 24px;">Enviar por WhatsApp</button>
+         </form>
+      </section>
+      <footer>
+         <p>© 2025 ADC Eventos. Todos los derechos reservados.</p>
+         <p><a href="#">Política de privacidad</a> | <a href="#">Términos y condiciones</a></p>
+      </footer>
+      <script>
+         function enviarPorWhatsapp() {
+           const nombre = document.getElementById("nombre").value;
+           const telefono = document.getElementById("telefono").value;
+           const correo = document.getElementById("correo").value;
+           const tipo = document.getElementById("tipo_evento").value;
+           const invitados = document.getElementById("invitados").value;
+           const fecha = document.getElementById("fecha_evento").value;
+           const mensaje = document.getElementById("mensaje").value;
+         
+           const texto = `*Hola, soy* ${nombre}%0A` +
+                         `*Tipo de evento:* ${tipo}%0A` +
+                         `*Fecha:* ${fecha}%0A` +
+                         `*Invitados:* ${invitados}%0A` +
+                         `*Teléfono:* ${telefono}%0A` +
+                         `*Correo:* ${correo}%0A` +
+                         `*Mensaje:* ${mensaje}`;
+         
+           const numero = "593988200116";
+           const url = `https://wa.me/${numero}?text=${texto}`;
+           window.open(url, "_blank");
+         }
+      </script>
+   </body>
 </html>
