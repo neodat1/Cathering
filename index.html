@@ -210,16 +210,20 @@
       text-decoration: underline;
     }
 
-    @media (max-width: 768px) {
-      .features {
-        flex-direction: column;
-        align-items: center;
-      }
+        .form-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 16px;
+        }
+        
+        @media (max-width: 768px) {
+          .form-grid {
+            grid-template-columns: 1fr;
+          }
+        }
 
-      .feature {
-        width: 90%;
-      }
-    }
+    
+
   </style>
 </head>
 <body>
