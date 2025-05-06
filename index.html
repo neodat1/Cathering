@@ -168,6 +168,10 @@ header {
       font-style: italic;
     }
 
+
+
+
+    
     .offer {
       background-color: var(--primary);
       color: var(--light);
@@ -276,6 +280,27 @@ header {
   border: 3px solid var(--accent);
 }
 
+
+
+.oferta-animada {
+  animation: resplandor 2s infinite alternate ease-in-out;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 223, 0, 0.4);
+}
+
+@keyframes resplandor {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4), 0 0 15px rgba(255, 223, 0, 0.3);
+    transform: scale(1);
+  }
+  100% {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 223, 0, 0.6);
+    transform: scale(1.04);
+  }
+}
+
+
     
 
   </style>
@@ -335,11 +360,14 @@ header {
   </div>
 </section>
 
-<section class="offer">
-  <h2>Oferta Limitada</h2>
+  <section class="offer">
+  <h2 class="oferta-animada">🎁 Oferta Limitada 🎁</h2>
   <p>Solicite su cotización hoy y reciba una <strong>degustación gratuita</strong> para 2 personas.</p>
 </section>
 
+
+
+  
 <section id="cotizar" class="formulario">
   <h2>Solicite su Cotización Personalizada</h2>
   <p style="font-size: 1.05em; max-width: 600px; margin: 0 auto 30px;">
