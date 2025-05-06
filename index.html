@@ -53,20 +53,29 @@
       color: var(--accent);
     }
 
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 100px 20px 60px;
-      background: linear-gradient(to bottom, #fff, #f8f4eb);
-    }
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+  background: url('cathe.jpeg') center/cover no-repeat;
+  color: var(--light);
+  position: relative;
+}
 
-    .hero h1 {
-      font-size: 2.8em;
-      color: var(--primary);
-      margin-bottom: 20px;
-    }
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* oscurece para mejor contraste */
+  z-index: 1;
+}
+
+.hero h1,
+.hero p,
+.hero a {
+  position: relative;
+  z-index: 2;
+}
+
 
     .hero p {
       font-size: 1.2em;
