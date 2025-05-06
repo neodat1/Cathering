@@ -54,18 +54,23 @@
     }
 
 .hero {
-  text-align: center;
-  padding: 120px 20px;
-  background: url('cathe.jpeg') center/cover no-repeat;
-  color: var(--light);
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* altura completa de la pantalla */
+  text-align: center;
+  padding: 20px;
+  background: url('hero-bg.jpg') center/cover no-repeat;
+  color: var(--light);
 }
 
 .hero::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.5); /* oscurece para mejor contraste */
+  background: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 
@@ -76,22 +81,29 @@
   z-index: 2;
 }
 
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
 
-    .hero p {
-      font-size: 1.2em;
-      max-width: 700px;
-      margin-bottom: 30px;
-    }
+.hero p {
+  font-size: 1.1em;
+  max-width: 700px;
+  margin-bottom: 30px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
 
-    .hero a {
-      background-color: var(--accent);
-      color: var(--text);
-      padding: 16px 32px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1em;
-    }
+.hero a {
+  background-color: var(--accent);
+  color: var(--text);
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
 
     .value-prop {
       padding: 80px 20px;
